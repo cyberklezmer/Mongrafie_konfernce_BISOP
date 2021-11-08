@@ -41,12 +41,16 @@ dojde. Druhá skupina opatření omezuje samotné kontakty, a to buď plošně
 (uzavření škol, obchodů, veřejných míst), nebo na individuální úrovni
 (karanténa, izolace).
 
+
+
+
 K efektivnímu omezení kontaktů na individuální úrovni je potřeba
 aktivně dohledávat jedince, kteří přišli do kontaktu s nákazou. Proces
 vyhledávání kontaktů nakažených je znám jako trasování a hraje
 významnou roli v tlumení šíření nemoci. Řada epidemiologických modelů
 obsahuje mechanismy pro modelování
 trasování~\cite{pg:mooney2020,pg:kucharski2020,pg:Kerr2020,pg:keeling2020,pg:bilinski2020}.
+
 
 Modelování různých epidemiologických opatření je i součástí 
 modelu M~\cite{pg:modelM}. Základním nástrojem pro modelování trasování je v našem případě simulace.
@@ -56,6 +60,7 @@ a vysvětlíme, jak jsou jednotlivá opatření v tomto modelu
 simulována. Následuje podkapitola s ukázkou dvou experimentů
 porovnávajících různě silné mechanismy trasování. V závěru shrneme
 výhody a nevýhody našeho přístupu.
+
 
 \section*{Metody}
 
@@ -202,6 +207,9 @@ odstupem dvou dnů nebo uplynutí určité doby od pozitivního testu.
   \label{pg:fig:ct}
 \end{figure}
 
+
+
+
 \section*{Výsledky}
 Jako příklad použití popsaného modelu uvedeme dva experimenty porovnávající
 různě silné mechanismy trasování. Pro každé nastavení bylo provedeno 1000
@@ -308,8 +316,6 @@ významnou roli v šíření nákazy.
 \end{figure}
 
 
-
-
 \section*{Závěr}
 
 Uvedené experimenty ilustrují možnosti použití našeho modelu a
@@ -347,4 +353,6 @@ modulu lze modelovat očkování. Výměnou grafu lze simulovat odlišné
 prostředí a aplikovat jemu specifické politiky (např. rotace a testování
 ve školách).
 
-Implementace modelu je dostupná na~GitHubu~\cite{pg:mmsoft}.
+
+Implementace modelu je dostupná na~GitHubu \cite{pg:mmsoft}.
+

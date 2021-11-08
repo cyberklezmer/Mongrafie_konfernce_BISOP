@@ -8,7 +8,11 @@
 %Limity a možnosti matematického modelování versus očekávání veřejnosti a decision-makerů: Role matematického modelování v rámci evidence based policies. Co možné není, co možné je a co je potřeba k tomu, aby to možné bylo. 
 \section*{Úvod} %Vakcíny jsou nedostatkovým zbožím a nejstarší skupina obyvatel je ohrožena, je nutné se k problému postavit programově
 Očkovací program proti covid-19 se stal jednou z největších logistických akcí v novodobých dějinách České republiky. Nelze na ni nahlížet jen jako na prostou distribuci vakcín od výrobců do očkovacích center, ale jako na komplexní proces řady na sebe navazujících kroků a vyžadující spolupráci mnoha aktérů. Akce tohoto rozměru byla pro stát (i pro svět) v dané době nová a nebylo možné vycházet z předobrazu jiné soudobé logistické operace. Organizace české očkovací kampaně tak proběhla ve značně improvizovaných podmínkách. %Svou roli sehrálo i podcenění rozsáhlosti této akce ze strany státu, který ve srovnání s jinými, zejména evropskými zeměmi začal strategii očkování připravovat až na poslední chvíli a řadu aspektů její operacionalizace řešil až za pochodu, pokud vůbec. To se promítalo i do komunikace státu směrem k veřejnosti. 
+
+
+    
 Názorně to ilustruje skutečnost, že finální strategii očkování představil premiér laické i odborné veřejnosti na svém facebookovém profilu \cite{logoc_caulidi}. 
+
 
 Vakcinace občanů České republiky začala v prosinci 2020 v návaznosti na doručení prvních zásob vakcíny Comirnaty a postupně se rozšiřovala spolu s rostoucími dodávkami očkovacích látek a také navyšováním kapacit očkovacích míst. %Do poloviny května bylo podáno více než čtyři miliony dávek celkem čtyř různých vakcín a u asi dvou a čtvrt milionu osob bylo dosaženo plné vakcinace. Do začátku července 2021 pak bylo podáno zhruba osm a půl milionu dávek, přičemž u téměř tří a půl milionu českých občanů bylo očkování ukončeno podáním druhé dávky. Očkování v současnosti (červenec 2021) probíhá napříč republikou v rámci nemocnic a zdravotnických zařízení bez ohledu na jejich zřizovatele, ve velkokapacitních očkovacích centrech a v ordinacích některých praktických lékařů. Okrajově jsou využívány další možnosti očkování, například v podobě mobilních očkovacích týmů \cite{mzcr_prehled} . Páteří očkovacího programu v Česku zůstávají očkovací centra, byť jejich další role je předmětem diskuse \cite{logo_jehly}
 %
@@ -19,8 +23,6 @@ Při ohlédnutí za téměř půlročním během očkování lze identifikovat �
 Cílem tohoto článku je zhodnotit plnění strategických záměrů očkovací kampaně. To je provedeno za pomoci rekapitulace původního záměru a jeho změn (sekce \ref{sec:strategie}), definicí teoreticky optimálního přístupu k realizaci kampaně (sekce \ref{sec_vypocet}), jeho porovnání s empirickými daty (sekce \ref{sec:comparison}), shrnutím vybraných odchylek a nastíněním důležitých otázek připravenosti pro případné další operace podobného rázu (závěrečná sekce).
 %
 Článek se (v návaznosti například na \cite{lastmile}) tematicky omezuje na logistiku poslední míle, v jejímž rámci nás zajímá zejména otázka ideálního přístupu k doručení vakcín klíčovým skupinám obyvatel.
-
-
 
 %Cílem tohoto článku je zhodnotit, jak efektivně kampaň probíhala, jak se její praktické provedení lišilo od původně definovaných teoretických předpokladů, a také poukázat na možné sporné aspekty. To bude provedeno za pomoci definice teoretického optima (sekce \ref{sec_vypocet}), jeho porování s reálnými daty (kapitola \ref{sec:comparison}), shrnutím silných/slabých míst (kapitola \ref{sec:implikace}) a nastíněním důležitých otázek připravenosti pro případné další operace podobného rázu.
 
@@ -39,6 +41,7 @@ Ve Strategii očkování \cite{strategie_covid} je definován cíl co nejrychlej
 %
 
 MZ ČR ve Strategii vychází ze statisticky identifikované silné závislosti úmrtnosti na covid-19 a věku, respektive vážných onemocnění (komorbidit). Prioritizační přístup tak předpokládá dvě klíčové skupiny, kde do první (I.A, plán očkování v lednu-únoru 2021) byly umístěny osoby nad 80 let věku, osoby v institucionalizované péči (například v pobytových zařízeních pro seniory) včetně ošetřovatelského a zdravotnického personálu v rámci klíčových oborů potřebných pro boj s pandemií. Skupina I.A byla posléze rozšířena o zaměstnance orgánů ochrany veřejného zdraví \cite{prioritizace_hygiena}. 
+
 %
 Druhou uvažovanou prioritní skupinou je I.B (plán očkování únor-březen/duben 2021), do níž byly zahrnuty osoby nad 60 let věku, pracovníci kritické infrastruktury, chronicky nemocní splňující předem definované podmínky závažnosti svého stavu a pedagogičtí pracovníci. %Prakticky však byla definice kritické infrastruktury státu definována velmi široce.
 Pedagogickým pracovníkům byla následně uvnitř skupiny zvýšena priorita, čímž se dostali do úvodní části skupiny \cite{prioritizace_ockovani}. Zbytek dospělé populace (očkovaný mimo prioritizaci dle vlastního zájmu) byl jako skupina II. naplánován od března/dubna 2021 do konce očkovací kampaně. Vládní Covid Portál uvádí, že cílová proočkovanost skupin I.A a I.B je 70 procent s tím, že pro obě skupiny jí nemusí být dosaženo v případě nedostatečného zájmu \cite{kdoprvni}.
@@ -266,6 +269,9 @@ kde
 
 Dále také platí $x_{\tau}=0$ pro $\tau<1$.
 Celý algoritmus je tedy velice jedoduchou úlohou lineárního programování, kterou je schopen řešit například Microsoft Excel\footnote{Celý přístup byl skupinou autorů již dříve právě za účelem jeho reálného užití v plánování popsán a do MS Excel implementován \cite{calc_blog}.}. Algoritmus lze při korektním zadání vstupních dat užívat pro plánování na libovolné úrovni: státu, kraje či jednotlivého očkovacího místa. 
+
+
+
 %
 %Představený algoritmus by při nekonečné kapacitě očkovacích míst a dostatku dávek už na začátku operace vedl k očkování celého státu ve dvou dnech, kdy v prvním by byly vyočkovány všechny jednodávkové vakcíny a polovina dvoudávkových vakcín. Po uplynutí intervalu by byla vyočkována druhá polovina dvoudávkových vakcín.
 
@@ -396,11 +402,13 @@ Napříč všemi okruhy argumentujeme, že ačkoli má logistika očkování tec
 
 Jak je patrné v analytické části, prioritní skupiny byly v období podle Strategie reálně upřednostňovány (tvořily majoritu očkovaných). Vakcíny byly (v některých momentech i prioritizaci navzdory) současně využívány i pro jiné skupiny obyvatel. K tomuto docházelo zejména ze tří důvodů;
 %
+
 \begin{enumerate}
 \item Vakcín byl v očkovacích místech dostatek, ale členové kritických skupin nebyli registrováni/nepřišli/nevěděli o aktuální možnosti vakcinace v daném místě \cite{logo_nahoda, lochar_karban} 
 \item Změny v prioritách na úrovni státu či místních celků \cite{logo_logistika, logo_pardubice}
 \item Absence kontrolního mechanismu či tlaku na dodržování prioritizace \cite{logo_predbihani, lochar_karban}
 \end{enumerate}
+
 
 Za prvním důvodem lze identifikovat praktické hledisko fungování procesu registrace a rezervace.
 %tím, že byl program realizován bez hlubší přípravy a pečlivého zhodnocení kroků potřebných k naočkování klíčových skupin. 
@@ -419,6 +427,7 @@ Ve všeobecnou známost vstoupil případ naočkování 1000 zaměstnanců Stát
 
 Třetí bod směřuje k absenci aplikace mechanismů, jež by odklonům od prioritizačního plánu dokázaly zabránit.
 %Ačkoli zde existovala prioritizace podle věku, prakticky dodržována nebyla, respektive neexistoval zde reálný tlak na vymáhání takto nastavených pravidel. Opakovaně tak docházelo k případům, kdy byli očkováni lidé či skupiny lidí zcela mimo registrační systém a bez jakékoli reálné priority \cite{logo_hejtman, logo_predbihani}. 
+
 Vedle zmiňované reprioritizace skupin se do systému dostávali i vybraní jednotlivci \cite{logoc_namestkyne, logoc_kabatek, CTK2021JsemDenik, logo_hejtman, logo_predbihani}.
 Tímto způsobem mohl ze strany veřejnosti vzniknout dojem, že vakcíny jsou dostupné pro ty, kteří si přístup k nim \emph{umějí zařídit}. 
 
@@ -434,6 +443,13 @@ Z řečeného lze usuzovat, že ani osoby odpovědné za očkovací kampaň nem�
 se spuštěním komunikační kampaně až takřka pět měsíců po zahájení očkování \cite{logoc_naruby,logoc_zpozdeni} vytváří situaci, kdy s nejrizikovějšími skupinami není pracováno v rovině přesvědčování ani informování, a tyto skupiny jsou tak v rozhodování o (ne)naočkování se odkázány jen na své dosavadní znalosti a informace, které se k nim dostanou od jiných aktérů než od státu. Důraz kladený na provedení kampaně ze strany státu se odráží i v tom, že na vedení celé kampaně byl v počátku najat koordinátor pouze na částečný úvazek, a to pouze několik týdnů před vlastním zahájením očkovacího programu, a následně tuto funkci vedle řady svých dalších povinností vykonával sám premiér \cite{ocko_blahuta,babis_koordinator}. %Poté, co funkci dobrovolně opustil, převzal tuto funkci sám na sebe premiér \cite{babis_koordinator}. Vývoj situace budí dojem, že premiér k očkovacímu programu přistupoval v rámci svého mikromanagementu obchodního artiklu, jejž stačí nabídnout a veřejnost se přihlásí sama \cite{ocko_respekt}. Ve Strategii očkování tak například není prakticky zvažována otázka motivace veřejnosti k očkování ani možné bariéry, které by mohly bránit úspěšné participaci občanů na očkovacím programu \cite{logoc_skvrny}. Zcela chyběl náhled, že realizaci očkovacího programu ovlivňuje řada behaviorálních faktorů \cite{duvody_zd}.
 
 
+
+
+
+
+
+
+
 %což lze interpretovat také tak, že stát se sám zříká zodpovědnosti za naplnění této strategie, respektive se na jejím naplnění podílí jen omezeně. 
 
 %Oficiální komunikační kampaň k očkování proti covid-19 spustilo ministerstvo zdravotnictví v polovině dubna 2021, tedy téměř pět měsíců po zahájení očkovací kampaně. 
@@ -441,7 +457,8 @@ se spuštěním komunikační kampaně až takřka pět měsíců po zahájení 
 
 %Český očkovací program podle našeho názoru byl a dosud je primárně postaven na tom, že občané sami aktivně vyjádří svůj zájem o očkování a budou i bez vnějších incentiv ochotni učinit konkrétní kroky i za cenu jistého nepohodlí pro to, aby vakcinace dosáhli. 
 Lze vznést otázku, zda se výchozím předpokladem nestalo, že občané o očkování stojí a stát by měl být jen jakýmsi servisním střediskem, které zajistí potřebné dodávky očkovacích látek a již neřeší motivaci občanů k očkování, přístup k němu \cite{logoc_zpozdeni} či překážky týkající se specifických skupin v rámci společnosti \cite{logoc_skvrny,logoc_romove}. %Zdá se, se stát bohužel nepracoval s variantou, že pro část populace bude očkování z objektivních důvodů nedostupné, respektive bude spojeno s významnými překážkami \cite{logoc_skvrny,logoc_romove}. Vznikla tak řada „bílých míst“, tedy skupin osob, které propadly očkovacím systémem. 
-Jednou ze skupin vyžadujících osobnější přístup mohou být samostatně žijící senioři nad 80 let, kteří naráželi na obtížně překonatelné problémy s registrací, někteří z nich dlouhou dobu čekali na možnost nechat se očkovat u praktických lékařů a k 16. květnu 2021 jsou nejméně proočkovanou podskupinou v rámci I.A. Tato skupina je dále specifická tím, že jsou její členové na rozdíl například od zdravotníků či osob v institucionalizované péči prostorově rozptýleni. Pokud se stát snažil maximalizovat celkovou proočkovanost namísto proočkovanosti prioritních skupin, bylo pro něj racionální pracovat spíše se skupinami, které je možné snadno shromáždit na jedno místo a očkovat po desítkách \cite{blog_ucitele}.  %Cíl v podobě maximalizace celkové proočkovanosti je tak pro státního plánovače u této skupiny obtížněji dosažitelný.
+Jednou ze skupin vyžadujících osobnější přístup mohou být samostatně žijící senioři nad 80 let, kteří naráželi na obtížně překonatelné problémy s registrací, někteří z nich dlouhou dobu čekali na možnost nechat se očkovat u praktických lékařů a k 16. květnu 2021 jsou nejméně proočkovanou podskupinou v rámci I.A. Tato skupina je dále specifická tím, že jsou její členové na rozdíl například od zdravotníků či osob v institucionalizované péči prostorově rozptýleni. Pokud se stát snažil maximalizovat celkovou proočkovanost namísto proočkovanosti prioritních skupin, bylo pro něj racionální pracovat spíše se skupinami, které je možné snadno shromáždit na jedno místo a očkovat po desítkách \cite{blog_ucitele}.  
+%Cíl v podobě maximalizace celkové proočkovanosti je tak pro státního plánovače u této skupiny obtížněji dosažitelný.
 
 
 
@@ -550,3 +567,7 @@ Při přípravě na další měsíce již nemusí jít o zajištění dostatečn
 
 
 %Na základě statistických dat o úmrtnosti na covid-19 lze identifikovat pozitivní závislost mezi věkem nemocného a pravděpodobností, že bude po onemocnění hospitalizován či zemře. Pokud bychom tedy dali vakcinační kampani za cíl minimalizaci počtu hospitalizovaných a zemřelých, znamenalo by to, že je s vakcinací nutné začít od nejstarších skupin obyvatelstva a postupně ji rozšiřovat směrem dolů%\footnote{Tento cíl byl ve veřejném prostoru kontrastován s cílem prioritního očkování skupin v rámci většinové populace za účelem rychlého uvolnění omezení a návratu k běžnému fungování země. Zmíněnou alternativu jsme rozebrali v analýze publikované na blogu BISOP zaměřené specificky na očkování profesní skupiny učitelů \cite{blog_ucitele}. V rámci odkazovaného textu jsme došli k závěru, že uvedený přístup není životaschopný v podmínkách, kdy jsou běžné funkce státu (zahrnující i zdravotní péči) významně omezeny přeplněností nemocnic. Vycházíme-li z předpokladu, že nejrizikovější skupiny v otázce úmrtí na onemocnění jsou nejrizikovějšími i směrem k hospitalizaci, vede jejich očkování v konečném důsledku k artikulovanému záměru v podobě rozvolnění.}. Výjimkou z uvažovaného pravidla mohou být ohrožené osoby v rámci jiných věkových skupin (vážně nemocní) nebo osoby, které z titulu svého povolání počet hospitalizovaných a zemřelých snižují sekundárně (lékaři a jiný zdravotnický personál včetně obsluhy očkovacích center).
+
+\begin{verbatim}
+\end{verbatim}
+
