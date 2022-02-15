@@ -1,11 +1,12 @@
 \documentclass{book}
-\usepackage[twoside, paperwidth=167mm, paperheight=235mm, top=27mm, outer=18mm, inner=21mm, bottom=20mm, includefoot, textwidth=128mm]{geometry}
+%\usepackage[twoside, paperwidth=167mm, paperheight=235mm, top=27mm, outer=18mm, inner=21mm, bottom=20mm, includefoot, textwidth=128mm]{geometry}
+\usepackage[twoside, paperwidth=167mm, paperheight=235mm, top=27mm, outer=18mm, inner=21mm, bottom=20mm, includefoot]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[czech]{babel}
 \usepackage{graphicx}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{amsmath}
-\usepackage{url}
+\usepackage{xurl}
 \usepackage{subfiles}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -15,11 +16,14 @@
 \usepackage[backgroundcolor=Apricot]{todonotes}
 \usepackage{hyperref}
 \usepackage{csquotes}
+\usepackage{tablefootnote}
+
 
 %\usepackage{hyphenat}
-%\hyphenation{vý-cho-do-asij-ský-mi}
+%\hyphenation{v\'{y}-cho-do-asij-sk\'{y}-mi, ne-pro-v\v{e}-\v{r}e-nos-ti}
 
 \usepackage[style=authoryear]{biblatex}
+
 % tady se zamenuji "()" za "[]"
 \makeatletter
 \newrobustcmd*{\parentexttrack}[1]{%
@@ -37,7 +41,6 @@
 \let\cite\parencite
 %\addbibresource{monografie-komplet.bib}
 \addbibresource{monografie-final.bib}
-\usepackage{csquotes}
 
 
 
@@ -45,36 +48,54 @@
 
 \begin{document}
 
+%\title{Příloha k Situační zprávě BISOP ze dne 22.11.2021}
+%\author{vybráno z připravovaného sborníku konference \\Poučení z pandemie COVID-19 \\14.6.2021}
+%\maketitle
+%\subfile{prispevky/120-Trasovani/main.tex}
+%\subfile{prispevky/130-Compliance/main.tex}
+%\end{document}
 
 
-
-\title{Rok s pandemií covid-19 -- reflexe v poločase\footnote{verze pro externí oponenty}}
+\title{Rok s pandemií covid-19 -- reflexe v poločase\footnote{verze s očištěnou a opravenou bibliografií}}
 \author{Bisop}
 \maketitle
 
 
-\subfile{prispevky/065-Nekolik_poznamek/main.tex}
-
+%\subfile{prispevky/065-Nekolik_poznamek/main.tex}
 
 \subfile{prispevky/000-uvod/main.tex}
 
+
+\part{Východiska, metody, modely}
+
 \subfile{prispevky/010-Co_se_vi/main.tex}
-\subfile{prispevky/030-Co_na_cem_zavisi/main.tex}
-\subfile{prispevky/040-Prirozene_experimenty/main.tex}
 \subfile{prispevky/060-Typy_modelu/main.tex}
 \subfile{prispevky/160-Agentni_modely/main.tex}
+\subfile{prispevky/070-Ucinnost_ockovani/main.tex}
+\subfile{prispevky/030-Co_na_cem_zavisi/main.tex}
+
+\part{Pandemie, data a evidence}
+
 \subfile{prispevky/050-Grafy_kontaktu/main.tex}
 \subfile{prispevky/090-Evaluace_politik/main.tex}
 \subfile{prispevky/100-Skoly/main.tex}
-\subfile{prispevky/070-Ucinnost_ockovani/main.tex}
+\subfile{prispevky/040-Prirozene_experimenty/main.tex}
 \subfile{prispevky/080-Logistika_ockovani/main.tex}
-\subfile{prispevky/065-Nekolik_poznamek/main.tex}
 \subfile{prispevky/120-Trasovani/main.tex}
 \subfile{prispevky/130-Compliance/main.tex}
-\subfile{prispevky/110-Ekonomicke_aspekty/main.tex}
-\subfile{prispevky/150-Zmeny_chovani/main.tex}
-\subfile{prispevky/085-Nove_vyzvy/main.tex}
 
+\subfile{prispevky/150-Zmeny_chovani/main.tex}
+
+\part{Dopady, zhodnocení a výhledy}
+
+\subfile{prispevky/065-Nekolik_poznamek/main.tex}
+\subfile{prispevky/110-Ekonomicke_aspekty/main.tex}
+\subfile{prispevky/085-Nove_vyzvy/main.tex}
+% Role vědy 
+
+
+\subfile{prispevky/170-Veda_pandemie/main.tex}
+\subfile{prispevky/Epilog/main.tex}
 
 %\bibliographystyle{apalike}
 %\bibliography{bibliography,vakcinace,covid19_czechia_paper,bib-ro} 
