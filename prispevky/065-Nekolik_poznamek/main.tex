@@ -4,10 +4,8 @@
 \textit{Martin Šmíd}
 \vspace{15mm}
 
-Očkování je zatím nejúčinnějším a zároveň jedním z~nejméně kontroverzních
-prostředků boje proti současné pandemii. Čím více lidí bude očkováno,
-tím více stávajících opatření může být zrušeno, a pokud bude dosaženo určité kritické
-meze, v~principu nebude potřeba žádných opatření. V~epidemickém modelování se zmiňované kritické mezi říká {\em práh kolektivní imunity} a vypočítá se jako $H=\frac{1}{R_0}$, kde $R_0$ je základní reprodukční číslo. Proč se $H$ vypočítá právě takto, je nasnadě: pokud je vůči infekci místo celé populace vnímavý pouze její poměr $h$, potom každý infekční jedinec nakazí místo $R_0$ osob pouze $h R_0$, takže při $h < H$ epidemie postupně vymizí. V~našem případě je situace složitější, protože vakcína neposkytuje stoprocentní ochranu a kromě toho je třeba vzít v~úvahu, že je určitá část populace imunní díky prodělané nemoci. Navíc je reprodukční číslo v~praxi uměle snižováno protiepidemickými opatřeními, na druhou stranu se nakažlivost SARS-CoV-2 kvůli mutacím postupně zvyšuje. Tato kapitola si klade za cíl vzít všechny tyto faktory do úvahy a odhadnout, jaký poměr populace je potřeba očkovat, aby byl výsledkem útlum epidemie.
+Očkování je zatím nejúčinnějším a zároveň jedním z~nejméně kontroverzních prostředků boje proti současné pandemii. Čím více lidí bude očkováno,
+tím více stávajících opatření může být zrušeno, a pokud bude dosaženo určité kritické meze, v~principu nebude potřeba žádných opatření. V~epidemickém modelování se zmi\-ňo\-va\-né kritické mezi říká {\em práh kolektivní imunity} a vypočítá se jako $H=\frac{1}{R_0}$, kde $R_0$ je základní reprodukční číslo. Proč se $H$ vypočítá právě takto, je nasnadě: pokud je vůči infekci místo celé populace vnímavý pouze její poměr $h$, potom každý infekční jedinec nakazí místo $R_0$ osob pouze $h R_0$, takže při $h < H$ epidemie postupně vymizí. V~našem případě je situace složitější, protože vakcína neposkytuje stoprocentní ochranu a kromě toho je třeba vzít v~úvahu, že je určitá část populace imunní díky prodělané nemoci. Navíc je reprodukční číslo v~praxi uměle snižováno protiepidemickými opatřeními, na druhou stranu se nakažlivost SARS-CoV-2 kvůli mutacím postupně zvyšuje. Tato kapitola si klade za cíl vzít všechny tyto faktory do úvahy a odhadnout, jaký poměr populace je potřeba očkovat, aby byl výsledkem útlum epidemie.
 
 Protože jsou vstupy naší analýzy předmětem značné nejistoty, její výsledky jsou nejistotou nutně zatíženy a jako takové je nutno je brát. Přesto se domníváme, že naše výsledky mohou do problematiky vnést určité nové světlo. Ukazují například, že potřebná míra vakcinace příliš nezávisí
 ani na promořenosti populace, ani na údajném sezonním chování epidemie,
@@ -33,11 +31,10 @@ $P$ je vliv opatření přímo nesouvisejících s~redukcí kontaktů (roušky, 
 $$ 
 R = r_\beta \times \beta \times r_c \times \frac{S}{N} \times \frac{1}\gamma = r_\beta \times r_c \times \frac{S}{N} \times R_0,
 $$
-kde $r_c$ je redukce kontaktů (odpovídá našemu $C$), $r_\beta$ je redukce nakažlivosti (odpovídá $P$), $S$ je počet vnímavých jedinců v~populaci, $N$ je celková velikost populace, $\beta$ a $\gamma$ jsou parametry SIR modelu a $R_0$ je základní reprodukční číslo, viz též kapitolu \ref{Typy_modelu}.} Hodnota $r$ se dá interpretovat jako základní reprodukční
+kde $r_c$ je redukce kontaktů (odpovídá našemu $C$), $r_\beta$ je redukce nakažlivosti (odpovídá $P$), $S$ je počet vnímavých jedinců v~populaci, $N$ je celková velikost populace, $\beta$ a $\gamma$ jsou parametry SIR modelu a $R_0$ je základní reprodukční číslo, viz též kapitolu \ref{Typy_modelu}.} Hodnota $r_t$ se dá interpretovat jako základní reprodukční
 číslo se zohledněním dodatečné ochrany $P_{t}$. Rovnici (\ref{eq:r}) dále použijeme dvojím způsobem: nejprve z~historických dat odhadneme trend $r_t$, poté za použití tohoto odhadu pomocí rovnice určíme míru vakcinace potřebnou pro utlumení epidemie.
 
-Hodnoty reprodukčního čísla $R$ počítáme takzvaným zjednodušeným způsobem, v~našem případě jako podíl týdenního přírůstku mezi čtvrtky daného a minulého týdne a týdenního přírůstku pět dní předem,
-tj. mezi sobotami minulého a předminulého týdne \cite{Rodhad}. Výhodou tohoto způsobu výpočtu je jednoduchost, intuitivnost, závislost pouze na jednom parametru (reprodukční doba) a robustnost vůči týdenním fluktuacím a vůči změně podílu
+Hodnoty reprodukčního čísla $R$ počítáme takzvaným zjednodušeným způsobem, v~našem případě jako podíl týdenního přírůstku mezi čtvrtky daného a minulého týdne a týdenního přírůstku pět dní předem, tj. mezi sobotami minulého a před\-mi\-nu\-lé\-ho týdne \cite{Rodhad}. Výhodou tohoto způsobu výpočtu je jednoduchost, intuitivnost, závislost pouze na jednom parametru (reprodukční doba) a robustnost vůči týdenním fluktuacím a vůči změně podílu
 odhalených nakažených (ascertainment rate), jehož případný skok vychýlí
 maximálně dvě týdenní pozorování.
 
@@ -71,7 +68,7 @@ I~= \mathrm{P}[\text{vnímavý}]= \mathrm{P}[\text{vnímavý}|\text{hlášen}]\m
 = 0 \times \mathrm{P}[\text{hlášen}] 
 + \mathrm{P}[\text{neprodělal nemoc ani není chráněn vakcínou}|\text{nehlášen}]\mathrm{P}[\text{nehlášen}]
 \\
-0+\mathrm{P}[\text{neprodělal nemoc}|\text{nehlášen}]\mathrm{P}[\text{není chráněn vakcínou}[\text{nehlášen}]\mathrm{P}|\text{nehlášen}]
+= 0+\mathrm{P}[\text{neprodělal nemoc}|\text{nehlášen}]\mathrm{P}[\text{není chráněn vakcínou}[\text{nehlášen}]\mathrm{P}|\text{nehlášen}]
 \\
 = \frac{1-\frac{x_{t}}{\alpha}}{1-x_t}\left(1-v_{t}\right)(1-x_t)=\left(1-\frac{x_{t}}{\alpha}\right)\left(1-v_{t}\right)´,
 \end{multline*}
@@ -93,7 +90,7 @@ Levý graf zobrazuje časový průběh všech tří veličin, pravý pak veliči
 $\hat{r}_t = \frac{R_{t}}{C_{t-2}I_{t}}$, která je přirozeným odhadem $r_{t}$
 (viz (\ref{eq:r})). Na první pohled svědčí průběh této 
 křivky pro silný sezonní vliv -- v~létě jsou hodnoty značně
-nižší než v~zimě. My sezonnost pro jednoduchost v prvním přiblížení nepředpokládáme -- je totiž také možné, že nižší hodnoty
+nižší než v~zimě. My sezonnost pro jednoduchost v~prv\-ním přiblížení nepředpokládáme -- je totiž také možné, že nižší hodnoty
 $r$ jsou zdánlivé: nákaza v~letním období nebyla komunitní a v~ohniscích,
 kde propukla (důl Darkov \cite{darkov} či Církvice u~Kutné hory \cite{cirkvice}),
 byla zavedena opatření omezující kontakty, která však nebyla reflektována
@@ -196,7 +193,7 @@ varianta B.1.617 nově nazývaná delta (dříve indická varianta), o~které se
 viz \cite{ecdc2021india}. 
 
 V~tabulce \ref{tab:res} je uvedena nutná restrikce kontaktů (při současné
-míře proočkovanosti) a nutná míra vakcinace pro dvě cílové hodnoty
+míře pro\-oč\-ko\-va\-nos\-ti) a nutná míra vakcinace pro dvě cílové hodnoty
 $R=1$ a $R=0.8$, a to pro 
 současnou hodnotu $r$ a její o~50\,\% vyšší hodnotu, o~které předpokládáme, že odpovídá variantě delta. Pro oba případy jsou uvedeny hodnoty bez vysazení a s~vysazením roušek. Pro každý scénář a každé
 cílové $R$ uvádíme dvě možnosti, jak pomocí očkování zajistit potřebnou ochranu:
@@ -364,7 +361,7 @@ tedy bohužel poměrně reálný.
 
 Dá se předpokládat, že klíčový pro další vývoj epidemie bude začátek podzimu. Tou dobou budou pro potřebnou míru proočkovanosti naše výsledky stále přibližně platit: přirozeně imunizovaných sice bude o~trochu více, ale ne o~mnoho, protože přes léto budou čísla nakažených pravděpodobně velice nízká. Platit budou i při uvažování sezonního vlivu, protože sezonní křivka bude přibližně ve stejném bodě jako dnes. 
 
-Při velmi pravděpodobném scénáři importu nové varianty budou platit čísla z~druhého a třetího řádku výsledných tabulek, což pro život bez roušek ve všech případech vyžaduje $60--70\%$ proočkovanost celé populace, tedy $70--80\,\%$ obyvatel nad 16 let, pokud se nebudou očkovat děti nad 12 let, případně $65--75\,\%$ obyvatel nad 12 let, pokud by se tyto děti očkovaly. Vzhledem k~současné situaci se dosažení takto vysoké proočkovanosti bohužel nezdá příliš realistické. Naše odhady jsou přitom optimistické v~tom smyslu, že neuvažují vyvanutí imunity, ať už té získané proděláním nemoci či očkováním.
+Při velmi pravděpodobném scénáři importu nové varianty budou platit čísla z~druhého a třetího řádku výsledných tabulek, což pro život bez roušek ve všech případech vyžaduje $60-70\%$ proočkovanost celé populace, tedy $70-80\,\%$ obyvatel nad 16 let, pokud se nebudou očkovat děti nad 12 let, případně $65-75\,\%$ obyvatel nad 12 let, pokud by se tyto děti očkovaly. Vzhledem k~současné situaci se dosažení takto vysoké proočkovanosti bohužel nezdá příliš realistické. Naše odhady jsou přitom optimistické v~tom smyslu, že neuvažují vyvanutí imunity, ať už té získané proděláním nemoci či očkováním.
 Pokud tedy nebudeme chtít nuceně opět sáhnout k~plošným
 opatřením, je jedinou možností obrany před tímto scénářem posílení
 dodatečné ochrany $P$, zejména pak testování a trasování, které tím, že

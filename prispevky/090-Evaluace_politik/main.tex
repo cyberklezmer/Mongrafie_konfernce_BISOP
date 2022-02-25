@@ -8,7 +8,7 @@
 \vspace{15mm}
 
 Cílem této kapitoly je seznámit čtenáře s~modelováním
-epidemiologických opatření v~multiagentním modelu M. Vysvětlíme
+epidemiologických o\-pat\-ře\-ní v~multiagentním modelu M. Vysvětlíme
 základní principy simulace jednotlivých opatření a ukážeme výsledky
 dvou experimentů srovnávajících různé mechanismy trasování.
 
@@ -56,7 +56,7 @@ Modelování různých epidemiologických opatření je i součástí
 modelu M~\cite{M-techrep2021}. Základním nástrojem pro modelování trasování je v~našem případě simulace.
 
 V~následující podkapitole stručně nastíníme základní principy modelu M
-a vysvětlíme, jak jsou jednotlivá opatření v~tomto modelu
+a vy\-svět\-lí\-me, jak jsou jednotlivá opatření v~tomto modelu
 simulována. Následuje podkapitola s~ukázkou dvou experimentů
 porovnávajících různě silné mechanismy trasování. V~závěru shrneme
 výhody a nevýhody našeho přístupu.
@@ -64,7 +64,7 @@ výhody a nevýhody našeho přístupu.
 
 \section*{Metody}
 
-\emph{Architektura epidemiologického modelu M.} Schéma modelu M je zobrazeno na obrázku~\ref{pg:fig:mm}. Model sestává ze
+\emph{Architektura epidemiologického modelu M.} Schéma modelu M je zobrazeno na ob\-ráz\-ku~\ref{pg:fig:mm}. Model sestává ze
 tří základních modulů -- epidemiologického modelu typu
 SEIR~\cite{pg:bailey1975}, grafu kontaktů $G$ a {\em policy} modulu.
 
@@ -133,7 +133,7 @@ Protektivní opatření (rozestupy, roušky apod.) realizujeme v~modelu
 redukcí parametru $\beta$, který reprezentuje nakažlivost nemoci.
 
 Omezení kontaktů se pak implementuje pomocí redukce hodnot
-pravděpodobností na příslušných hranách. V~případě plošných opatření
+prav\-dě\-po\-dob\-nos\-tí na příslušných hranách. V~případě plošných opatření
 jde pouze o~změnu jednoho parametru, váhy příslušné vrstvy,
 viz~(\ref{pg:eq:w}). Váhy vrstev jsou ve výchozím stavu rovny jedné a
 umožňují jednoduše redukovat pravděpodobnosti všech hran spadajících
@@ -155,7 +155,7 @@ q_l =
   0  &  \mbox{jinak,}
 \end{cases}
 $$
-kde hrany odpovídající rodině zůstávají beze změny a ostatní hrany jsou vypnuty. Použitím nenulových hodnot $q_l$ pro vybrané vrstvy lze simulovat částečné dodržování karantény, a to pouze na určitých vrstvách (např. $0.5$ pro rodinné návštěvy, ale $0$ pro návštěvy restaurací apod.). 
+kde hrany odpovídající rodině zůstávají beze změny a ostatní hrany jsou vypnuty. Použitím nenulových hodnot $q_l$ pro vybrané vrstvy lze simulovat částečné dodržování karantény, a to pouze na určitých vrstvách (např. $0.5$ pro rodinné návštěvy, ale $0$~pro návštěvy restaurací apod.). 
 
 
 Samotný proces testování a trasování je v~modelu implementován pomocí {\em policy} modulů. Jednou z~implementovaných politik je tzv. samoizolace. Uzel,
@@ -217,7 +217,7 @@ simulací pro pevně daná různá počáteční nastavení náhodného
 generátoru (což zaručí různý průběh každé simulace, který je však díky nastavení možné kdykoli zopakovat).
 
 V~experimentech uvažujeme pět hypotetických trasovacích algoritmů
-o~síle $(0, 0, 0, 0)$ (žádné trasování), $(1, 0, 0, 0)$ (trasuje se
+o~sí\-le $(0, 0,$ $ 0, 0)$ (žádné trasování), $(1, 0, 0, 0)$ (trasuje se
 pouze rodina), $(1, 1, 0, 0)$ (trasují se rodina, školní a pracovní
 kontakty), $(1, 1, 1, 0)$ (trasuje se vše kromě kategorie ostatní) a
 $(1, 1, 1, 1)$ (ideální trasování). Ideální trasování odpovídá použití
@@ -280,7 +280,7 @@ pracovní, školní a volnočasové kontakty. Ideální trasování již
 nepřináší tak výrazné zlepšení oproti tomuto typu trasování.
 
 Obrázek~\ref{pg:fig:exp1b} přináší srovnání stejných trasovacích
-mechanismů v~situaci s~plošnými omezeními (odpovídajícími jaru 2020
+mechanismů v~situaci s~plošný\-mi omezeními (odpovídajícími jaru 2020
 v~České republice). I~v~případě plošných omezení je trasování nutné,
 neboť bez něj dochází ke vzestupu epidemie. V~tomto případě
 se však rozdíly mezi slabým a silným trasováním stírají a i trasování
@@ -324,7 +324,7 @@ Z~prvního experimentu je vidět velká síla plošných opatření i nutnost
 důslednějšího trasování při jejich nepřítomnosti.
 
 Druhý experiment ilustruje přínos elektronických trasovacích aplikací
-typu {\em eRouška} při konání velkých akcí, kde se lidé vzájemně
+typu {\em eRou\-ška} při konání velkých akcí, kde se lidé vzájemně
 neznají.
 
 Oba experimenty ukazují i jednu nevýhodu našeho modelu, a to velký rozptyl 
@@ -338,7 +338,7 @@ již známých znalostí chování nemoci covid-19, část (především paramet
 
 Není však třeba reprodukovat minulý průběh s~naprostou přesností, protože model sám není určen k~samotné predikci průběhu epidemie, ale spíše má sloužit jako nástroj pro relativní srovnávání jednotlivých opatření. 
 
-Jeho hlavní výhodou je možnost simulace jak plošných opatření, tak
+Jeho hlavní výhodou je možnost simulace jak plošných o\-pat\-ře\-ní, tak
 opatření individuálních. Současně je možno simulovat dodržování
 opatření protektivních (redukcí parametrů nakažlivosti). Díky
 struktuře modelu mohou být opatření simulována detailně (na úrovni
