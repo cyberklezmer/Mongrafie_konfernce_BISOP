@@ -4,11 +4,12 @@
 \textit{Martin Šmíd}
 \vspace{15mm}
 
-Očkování je zatím nejúčinnějším a zároveň jedním z~nejméně kontroverzních prostředků boje proti současné pandemii. Čím více lidí bude očkováno,
-tím více stávajících opatření může být zrušeno, a pokud bude dosaženo určité kritické meze, v~principu nebude potřeba žádných opatření. V~epidemickém modelování se zmi\-ňo\-va\-né kritické mezi říká {\em práh kolektivní imunity} a vypočítá se jako $H=\frac{1}{R_0}$, kde $R_0$ je základní reprodukční číslo. Proč se $H$ vypočítá právě takto, je nasnadě: pokud je vůči infekci místo celé populace vnímavý pouze její poměr $h$, potom každý infekční jedinec nakazí místo $R_0$ osob pouze $h R_0$, takže při $h < H$ epidemie postupně vymizí. V~našem případě je situace složitější, protože vakcína neposkytuje stoprocentní ochranu a kromě toho je třeba vzít v~úvahu, že je určitá část populace imunní díky prodělané nemoci. Navíc je reprodukční číslo v~praxi uměle snižováno protiepidemickými opatřeními, na druhou stranu se nakažlivost SARS-CoV-2 kvůli mutacím postupně zvyšuje. Tato kapitola si klade za cíl vzít všechny tyto faktory do úvahy a odhadnout, jaký poměr populace je potřeba očkovat, aby byl výsledkem útlum epidemie.
+\noindent Očkování je zatím nejúčinnějším a zároveň jedním z~nejméně kontroverzních prostředků boje proti současné pandemii. Čím více lidí bude naočkováno,
+tím více stávajících opatření může být zrušeno, a pokud bude dosaženo určité kritické meze, v~principu nebude potřeba žádných opatření. V~epidemickém modelování se zmi\-ňo\-va\-né kritické mezi říká {\em práh kolektivní imunity} a vypočítá se jako $H=\frac{1}{R_0}$, kde $R_0$ je základní reprodukční číslo. Proč se $H$ vypočítá právě takto, je nasnadě: pokud je vůči infekci místo celé populace vnímavý pouze její poměr $h$, potom každý infekční jedinec nakazí místo $R_0$ osob pouze $h R_0$, takže při $h < H$ epidemie postupně vymizí. V~našem případě je situace složitější, protože vakcína neposkytuje stoprocentní ochranu a kromě toho je třeba vzít v~úvahu, že určitá část populace je imunní díky prodělané nemoci. Navíc je reprodukční číslo v~praxi uměle snižováno protiepidemickými opatřeními, na druhou stranu se nakažlivost SARS-CoV-2 kvůli mutacím postupně zvyšuje. 
 
-Protože jsou vstupy naší analýzy předmětem značné nejistoty, její výsledky jsou nejistotou nutně zatíženy a jako takové je nutno je brát. Přesto se domníváme, že naše výsledky mohou do problematiky vnést určité nové světlo. Ukazují například, že potřebná míra vakcinace příliš nezávisí
-ani na promořenosti populace, ani na údajném sezonním chování epidemie,
+Tato kapitola si klade za cíl vzít v potazvšechny tyto faktory a odhadnout, jaký poměr populace je potřeba očkovat, aby výsledkem byl útlum epidemie.
+Protože jsou vstupy naší analýzy předmětem značné nejistoty, její výsledky jsou nejistotou nutně zatíženy a jako takové je nutno je brát. Přesto se domníváme, že naše výsledky mohou do problematiky vnést určité nové světlo. Ukazují například, že potřebná míra vakcinace ani příliš nezávisí
+;na promořenosti populace, ani na údajném sezónním chování epidemie,
 tedy na faktorech, které bývají často uváděny jako něco, co epidemii samo utlumí, takže očkování ztratí smysl.
 
 \section*{Model}
@@ -54,7 +55,7 @@ v~České republice.
 Ve své analýze reflektujeme fakt, že určitá část infekcí nebyla
 hlášena, konkrétně že pravděpodobnost hlášení infekce (ascertainment
 rate) je $\alpha=0.4$ (tento odhad je diskutován níže). Z~výše uvedeného vychází,
-že podíl těch, kteří nejsou v~čase $t$ imunní, je roven
+že podíl těch, kteří nejsou v~čase $t$ imunní, je roven:
 \begin{equation}
 I_{t}=\left(1-\frac{x_{t}}{\alpha}\right)\left(1-v_{t}\right),\qquad v_{t}=(\pi_{t}^{1}-\pi_{t}^{2})e^{1}+\pi_{t}^{2}e^{2},\label{eq:i}
 \end{equation}
@@ -89,17 +90,17 @@ Obrázek \ref{fig:rci} znázorňuje vývoj veličin $R$, $C$ a $I$.
 Levý graf zobrazuje časový průběh všech tří veličin, pravý pak veličinu
 $\hat{r}_t = \frac{R_{t}}{C_{t-2}I_{t}}$, která je přirozeným odhadem $r_{t}$
 (viz (\ref{eq:r})). Na první pohled svědčí průběh této 
-křivky pro silný sezonní vliv -- v~létě jsou hodnoty značně
-nižší než v~zimě. My sezonnost pro jednoduchost v~prv\-ním přiblížení nepředpokládáme -- je totiž také možné, že nižší hodnoty
+křivky pro silný sezónní vliv -- v~létě jsou hodnoty značně
+nižší než v~zimě. My sezónnost pro jednoduchost v~prv\-ním přiblížení nepředpokládáme -- je totiž také možné, že nižší hodnoty
 $r$ jsou zdánlivé: nákaza v~letním období nebyla komunitní a v~ohniscích,
-kde propukla (důl Darkov \cite{darkov} či Církvice u~Kutné hory \cite{cirkvice}),
+kde propukla (důl Darkov \cite{darkov} či Církvice u~Kutné Hory \cite{cirkvice}),
 byla zavedena opatření omezující kontakty, která však nebyla reflektována
 celostátním výzkumem \cite{paqcovid}.
 Vysoké hodnoty odhadu $\hat r$ z~počátku první vlny
 epidemie by se pak daly interpretovat jako následek počáteční nulové dodatečné
 ochrany $P_{t}$, je však třeba si též uvědomit, že systém sběru
 dat se teprve zabíhal, do testování bylo zapojeno menší množství laboratoří, navíc byly počty nakažených velice malé, data
-tedy mohla být zkreslena náhodnými fluktuacemi. Protože však pro uvažování sezónnosti existují přesvědčivé argumenty, zejména fakt, že se více rizikových kontaktů odehrává v uzavřených prostorách, dále v článku uvažujeme i model se sezónní složkou.
+tedy mohla být zkreslena náhodnými fluktuacemi. Protože však pro uvažování seóonnosti existují přesvědčivé argumenty, zejména fakt, že se více rizikových kontaktů odehrává v uzavřených prostorách, dále v článku uvažujeme i~model se sezonní složkou.
 
 Graf na obrázku \ref{fig:xy} zobrazuje hodnoty $R_{t}$ vykreslené oproti násobku
 $C_{t-2}\times I_{t}$. 
@@ -131,7 +132,7 @@ týdnu jsou vysvětlitelné zavedením antigenních testů pro veřejnost,
 která skokově zvýšila počty odhalených infekcí. 
 
 Ačkoli výše diskutovaný postup není ve striktním souladu se zásadou matematického modelování, že struktura modelu musí být navržena ještě bez znalosti dat, dále předpokládáme v~každém úseku konstantní hodnotu $r_{t}$,
-danou příslušným lineárním trendem, čímž dojdeme k~modelu $r_{t}$ znázorněnému na obrázku \ref{fig:model}
+danou příslušným lineárním trendem, čímž dojdeme k~modelu $r_{t}$ znázorněnému na obrázku \ref{fig:model}.
 \begin{figure}
 \begin{center}
 \includegraphics[scale=0.4]{pic/whole}
@@ -139,12 +140,12 @@ danou příslušným lineárním trendem, čímž dojdeme k~modelu $r_{t}$ znáz
 \label{fig:model}
 \end{center}
 \end{figure}
-Kromě našeho modelu $r_t$ zobrazuje graf jeho odhad $\hat r_t$, dále průběh epidemie a poněkud kusé a pravděpodobně málo spolehlivé informace o~procentním zastoupení takzvané
+Kromě našeho modelu $r_t$ graf zobrazuje jeho odhad $\hat r_t$, dále průběh epidemie a poněkud kusé a pravděpodobně málo spolehlivé informace o~procentním zastoupení takzvané
 české varianty B.1.258$\Delta$ a varianty B.1.1.7, nově označované jako varianta alfa:
 \begin{itemize}
 \item odhady \cite{brejova2021b}, že v~listopadu byla
 prevalence varianty alfa nulová a prevalence „české“ varianty 60\%, 
-\item zmínku tehdejšího ministra zdravotnictví Blatného z~22. ledna, že britská mutace tvoří 40\,\% vzorků (\cite{blatnybrigit})
+\item zmínku tehdejšího ministra zdravotnictví Blatného z~22. ledna, že britská mutace tvoří 40\,\% vzorků (\cite{blatnybrigit}).
 \item výzkumnou zprávu \cite{diana}, která 19. února odhaduje rozšíření varianty alfa
 na přibližně 60\,\%.
 \end{itemize}
@@ -152,7 +153,7 @@ To vše naznačuje, že každá vlna epidemie odpovídá jedné úrovni základn
 mnohem přesvědčivější evidenci.
 
 Jakkoli vypadá náš model $r_t$ realisticky, neodpovídá na otázku, která z~jeho složek se v~čase mění: zda základní reprodukční číslo $R^0$ nebo míra dodatečné ochrany $P$. Když však odhlédneme od léta 2020, je křivka $r_t$ rostoucí a její nárůst mezi prvním půlrokem epidemie a jarem 2021 zhruba odpovídá udávanému nárůstu nakažlivosti varianty alfa proti původní variantě (viz níže), zdá se tedy pravděpodobnější, že příčinou nárůstu je změna základního reprodukčního čísla, způsobená nástupem nových mutací. Předpoklad, že $P$ je konstantní, je přitom do jisté míry 
-oprávněný, neboť například za celé sledované období s~výjimkou léta
+oprávněný, neboť za celé sledované období s~výjimkou léta
 2020 platila povinnost nosit roušky, a například z~výzkumu \cite{paqcovid}
 vyplývá, že poměr rizikových kontaktů s~rouškou a bez roušky se
 v~čase příliš nemění. 
@@ -173,10 +174,10 @@ dohromady dává $I=0.45$. Náš odhad současné hodnoty $r$ je $2.6$ (viz obr�
 $C=\frac{1}{r\times I}=0.85$. Pokud bychom požadovali, aby $R=0.8$,
 pak by muselo být $C=0.68$. Hodnota $C$ odpovídající danému týdnu
 podle \cite{paqcovid} je přitom 0.69, což by mělo spolu
-s~rychle rostoucí proočkovaností a předpokládanému snižování rizikových kontaktů v letních měsících, danému absencí kontaktů ve školách, stačit k~udržení znatelného poklesu.
+s~rychle rostoucí proočkovaností a předpokládaným snižováním rizikových kontaktů v letních měsících, daným absencí kontaktů ve školách, stačit k~udržení znatelného poklesu.
 
 Stavu, kdy by nebylo nutno kontakty redukovat a přitom by bylo $R=1$,
-pak odpovídá $v=1-\frac{R}{(1-x/\alpha)r_{t}}=0.41$, čehož by bylo dosaženo, kdyby bylo 38\,\% celé populace očkováno oběma dávkami, nebo
+pak odpovídá $v=1-\frac{R}{(1-x/\alpha)r_{t}}=0.41$, čehož by bylo dosaženo, kdyby bylo 38\,\% celé populace očkováno oběma dávkami nebo
 například $45\,\%$ první a $12\,\%$ druhou dávkou.
 
 Je nutno si uvědomit, že tato čísla platí \emph{ceteris peribus},
@@ -184,18 +185,18 @@ to jest za podmínky, že všechny ostatní proměnné zůstanou stejné, což d
 Toto se týká zejména míry ochranných opatření $P_{t}$, o~které jsme zatím
 předpokládali, že se v~čase nemění. Pokud by se však například
 naráz přestaly nosit roušky a respirátory, jistě by to znamenalo nárůst
-reprodukčního čísla. Kdybychom například předpokládali 50\%
+reprodukčního čísla. Kdybychom před\-po\-klá\-da\-li 50\%
 účinnost této ochrany a spolu s~\cite{paqcovid} její 50\% současné
 použití, pak by její plošné vynechání zvětšilo $r$ o~33\,\%,\footnote{Při 50\% kontaktech a 50\% účinnosti s~rouškou je $r=(0.5+0.5\times0.5)r^{\star}$,
 kde $r^{\star}$ je analogie veličiny $r$ neuvažující ochranu úst.} což by samozřejmě zvýšilo nutnou míru vakcinace. Totéž platí v~případě,
-že by místo současné převládající mutace převládla 
+že by místo současné pře\-vlá\-da\-jí\-cí mutace převládla 
 varianta B.1.617 nově nazývaná delta (dříve indická varianta), o~které se všeobecně předpokládá, že je nakažlivější,
 viz \cite{ecdc2021india}. 
 
 V~tabulce \ref{tab:res} je uvedena nutná restrikce kontaktů (při současné
 míře pro\-oč\-ko\-va\-nos\-ti) a nutná míra vakcinace pro dvě cílové hodnoty
 $R=1$ a $R=0.8$, a to pro 
-současnou hodnotu $r$ a její o~50\,\% vyšší hodnotu, o~které předpokládáme, že odpovídá variantě delta. Pro oba případy jsou uvedeny hodnoty bez vysazení a s~vysazením roušek. Pro každý scénář a každé
+současnou hodnotu $r$ a její o~50\,\% vyšší hodnotu, o~které předpokládáme, že odpovídá variantě delta. Pro oba případy jsou uvedeny hodnoty bez vysazení a~s~vy\-sa\-zením roušek. Pro každý scénář a každé
 cílové $R$ uvádíme dvě možnosti, jak pomocí očkování zajistit potřebnou ochranu:
 proočkovanost všech oběma dávkami (sloupec $\pi$) a rozdílnou proočkovanost
 první a druhou dávkou ($\pi^{1}$ a $\pi^{2})$ s~tím, že očkovanost první dávkou naroste ze současného stavu o~stejnou hodnotu jako naočkovanost druhou dávkou.
@@ -230,7 +231,7 @@ nákazy nebo pociťovaly příznaky typické pro covid-19 a přitom byly testov�
 činil cca 20\,\% v~září, cca 40\,\% začátkem března a až koncem března
 vyšplhal tento poměr na cca 60\,\%, což v~průměru odpovídá naší volbě $\alpha.$
 Jako další nápověda pro náš odhad sloužil podíl hospitalizovaných,
-kteří byli před hospitalizací detekováni, jehož komplement donedávna sloužil jako
+kteří byli před hospitalizací detekováni, jeho komplement donedávna sloužil jako
 jeden z~komponentů indexu rizika protiepidemického systému PES \cite{PES}. Tato hodnota přitom může sloužit jako horní odhad $\alpha$.\footnote{Dle Bayesova vzorce 
 \[
 \alpha=\mathrm{P}[\text{detekován}|\text{hospitalizován}]\frac{\mathrm{P}[\text{hospitalizován}]}{\mathrm{P}[\text{hospitalizován}|\text{detekován}]}
@@ -239,14 +240,14 @@ jeden z~komponentů indexu rizika protiepidemického systému PES \cite{PES}. Ta
 je pozitivně korelována s~detekcí, bude zlomek menší než jedna,
 což znamená že $\alpha$\textless P{[}detekován\textbar hospitalizován{]}. } 
 Podíl detekovaných hospitalizovaných v~lednu činil okolo 0.45 a až od března se ustálil
-na hodnotách okolo 60\%, což víceméně odpovídá výsledkům \cite{paqcovid}. 
+na hodnotách okolo 60\,\%, což víceméně odpovídá výsledkům \cite{paqcovid}. 
 Pro námi zvolenou hodnotu $\alpha=0.4$ navíc svědčí náš model, který na základě této hodnoty dochází k~podílu $1.68$ současného a zářijového základního reprodukčního čísla, což například není daleko od hodnoty $1.78$ uvedené v~\cite{curran2021transmission}. 
 
-Vědomi si nejistoty odhadu $\alpha$ a také vzhledem k~tomu, že se v~mediálním prostoru spekulovalo o~mnohem vyšších podílech neodhalených infekcí než by odpovídalo $\alpha=0.4$, provedli
+Vědomi si nejistoty odhadu $\alpha$ a faktu, že se v~mediálním prostoru spekulovalo o~mnohem vyšších podílech neodhalených infekcí, než by odpovídalo $\alpha=0,4$ provedli
 jsme v~rámci citlivostní analýzy stejné výpočty jako v~předchozím
-odstavci, ovšem pro $\alpha=0.25$. Při této hodnotě by získanou
-imunitu v~současné době mělo přibližně 6.5 milionu osob na rozdíl od 4.05
-v~případě $\alpha=0.4$. Potřebné míry redukce kontaktů a očkovanosti uvádíme na obrázku \ref{fig:calpha}.
+odstavci, ovšem pro $\alpha=0,25$. Při této hodnotě by získanou
+imunitu v~současné době mělo přibližně 6,5 milionu osob na rozdíl od 4,05
+v~případě $\alpha=0,4$. Potřebné míry redukce kontaktů a očkovanosti uvádíme na obrázku \ref{fig:calpha}.
 
 \begin{figure}
 \begin{center}
@@ -270,7 +271,7 @@ Nová varianta ($r=5.51$)	& $0.64$	& $0.51$	& $0.53$	& $0.58$	& $0.38$	& $0.62$	
 Z~výsledků je vidět, že ani o~2.45 milionu větší promořenost situaci příliš
 nepomohla. Požadavky na současnou redukci kontaktů jsou sice znatelně
 nižší, požadavky na vakcinaci jsou však srovnatelné. Vysvětlení, proč
-tomu tak je, je nasnadě: pokud je více imunních lidí, pak pro to,
+tomu tak je, je nasnadě: pokud je více imunních lidí, pak proto,
 aby se dosáhlo stejných počtů nakažených, musí být značně vyšší $r_{t}$
 -- zde je to 3.67 místo 2.6 -- což pochopitelně vyžaduje pro stejné $R$
 větší proočkovanost. Poměr reprodukčního čísla varianty alfa a
@@ -281,7 +282,7 @@ $\alpha=0.4$ je realističtější.
 Další slabina našeho modelu může spočívat v~nejistotě týkající se účinnosti vakcíny
 -- odhady z~\cite{Hall_etal2021} mají poměrně velké konfidenční
 intervaly, a například novější, byť nerecenzovaná studie \cite{Shapiro_etal2021}
-uvádí značně větší účinnosti: $e^{1}=0.82$, $e^{2}=0.942$. Výsledky pro tyto hodnoty jsou vidět na obrázku \ref{fig:cv}. Podobně jako v~předchozím případě vidíme, že požadavky na vakcinaci jsou mírnější, ne však ne řádově.
+uvádí značně větší účinnosti: $e^{1}=0.82$, $e^{2}=0.942$. Výsledky pro tyto hodnoty jsou vidět na obrázku \ref{fig:cv}. Podobně jako v~předchozím případě vidíme, že požadavky na vakcinaci jsou mírnější, ne však řádově.
 
 \begin{figure}
 \begin{center}
@@ -309,8 +310,7 @@ evidence, obecně se soudí, že se virus v~létě šíří pomaleji, ať už
 je to kvůli slunečnímu záření nebo proto, že se lidé setkávají více
 pod širým nebem. Pokles v~létě 2020, který jsme přisoudili absenci
 komunitního šíření, by alespoň částečně mohl být důsledkem právě tohoto
-efektu. Proto jsme jako další případ citlivostní analýzy modifikovali
-náš model tak, aby kromě dosavadních determinant reprodukční číslo záviselo
+efektu. Proto jsme jako další případ citlivostní analýzy svůj model modifikovali tak, aby kromě dosavadních determinant reprodukční číslo záviselo
 také na periodické složce: konkrétně jsme modifikovali (\ref{eq:r}) na 
 $r_{t}=R_{0}^{t}\times P_{t}\times(1+\kappa\phi_{t})$, kde $\phi_{t}$
 je sinusoida s~roční periodou a maximem v~půli ledna a $\kappa$ je
@@ -339,10 +339,8 @@ Nová varianta ($r=3.38$)	& $0.66$	& $0.53$	& $0.52$	& $0.57$	& $0.37$	& $0.61$	
 \end{center}
 
 \end{figure}
-
-
 Jak se dalo očekávat, požadavky jsou zde měkčí než v~základní variantě,
-byť opět nikoli řádově. Nicméně je zde potřeba vzít v~úvahu i fakt, že  pokud model se sezonní složkou platí, nacházíme se v~současné době blízko dna cyklické složky, přičemž na jejím předpokládaném
+byť opět nikoli řádově. Nicméně je zde potřeba vzít v~úvahu i fakt, že  pokud model se sezónní složkou platí, nacházíme se v~současné době blízko dna cyklické složky, přičemž na jejím předpokládaném
 vrcholu v~lednu 2022 by veličina $r$ byla o~33\,\% vyšší, což by například
 v~nejhorším scénáři z~tabulky znamenalo požadavek 73\% místo 64\% proočkovanosti
 pro udržení $R=1$, viz poslední řádek tabulky.
@@ -350,7 +348,7 @@ pro udržení $R=1$, viz poslední řádek tabulky.
 \section*{Závěr}
 
 Naše výsledky přesvědčivě ukazují, že by v~současné době neměl být problém epidemii
-utlumit a například už při cca šedesátiprocentní proočkovanosti
+utlumit a už při cca 60\% proočkovanosti
 by bylo možno zrušit většinu restriktivních opatření včetně nošení roušek. Přitom dle \cite{paqcovid} v~současné době 64\,\% dospělých respondentů uvádí, že jsou očkováni nebo ochotni nechat se očkovat, což znamená 56\,\% celé populace, pokud by se jako v~současnosti očkovali pouze lidé starší 16 let, případně 59\,\% populace, pokud by se stejnou měrou očkovaly i děti od 12 let. Dosažení těchto hranic není úplně nerealistické, a to ani
 ani z~hlediska logistiky (viz kapitolu \ref{Logistika_ockovani}). Hlavní nebezpečí se tedy
 skrývá v~možném nástupu nové varianty, přičemž je potřeba si uvědomit,
@@ -359,11 +357,11 @@ případů málo, velice rychle převládnout. Scénář importu některé
 nové varianty v~průběhu prázdnin, až se lidé budou vracet z~dovolených, je
 tedy bohužel poměrně reálný.
 
-Dá se předpokládat, že klíčový pro další vývoj epidemie bude začátek podzimu. Tou dobou budou pro potřebnou míru proočkovanosti naše výsledky stále přibližně platit: přirozeně imunizovaných sice bude o~trochu více, ale ne o~mnoho, protože přes léto budou čísla nakažených pravděpodobně velice nízká. Platit budou i při uvažování sezonního vlivu, protože sezonní křivka bude přibližně ve stejném bodě jako dnes. 
+Dá se předpokládat, že klíčový pro další vývoj epidemie bude začátek podzimu. Tou dobou budou pro potřebnou míru proočkovanosti naše výsledky stále do jisté míry platit: přirozeně imunizovaných sice bude o~něco více, ale ne o~mnoho, protože přes léto budou čísla nakažených pravděpodobně velice nízká. Platit budou i při uvažování sezónního vlivu, protože sezónní křivka bude přibližně ve stejném bodě jako dnes. 
 
 Při velmi pravděpodobném scénáři importu nové varianty budou platit čísla z~druhého a třetího řádku výsledných tabulek, což pro život bez roušek ve všech případech vyžaduje $60-70\%$ proočkovanost celé populace, tedy $70-80\,\%$ obyvatel nad 16 let, pokud se nebudou očkovat děti nad 12 let, případně $65-75\,\%$ obyvatel nad 12 let, pokud by se tyto děti očkovaly. Vzhledem k~současné situaci se dosažení takto vysoké proočkovanosti bohužel nezdá příliš realistické. Naše odhady jsou přitom optimistické v~tom smyslu, že neuvažují vyvanutí imunity, ať už té získané proděláním nemoci či očkováním.
 Pokud tedy nebudeme chtít nuceně opět sáhnout k~plošným
-opatřením, je jedinou možností obrany před tímto scénářem posílení
+opatřením, jedinou možností obrany před tímto scénářem je posílení
 dodatečné ochrany $P$, zejména pak testování a trasování, které tím, že
 infekčního jedince včas izolují, mohou mít na reprodukční číslo značný
 vliv.

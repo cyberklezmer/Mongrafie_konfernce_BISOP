@@ -7,7 +7,7 @@
 \textit{Petra Vidnerová, Gabriela Suchopárová, Roman Neruda}
 \vspace{15mm}
 
-Cílem této kapitoly je seznámit čtenáře s~modelováním
+\noindent Cílem této kapitoly je seznámit čtenáře s~modelováním
 epidemiologických o\-pat\-ře\-ní v~multiagentním modelu M. Vysvětlíme
 základní principy simulace jednotlivých opatření a ukážeme výsledky
 dvou experimentů srovnávajících různé mechanismy trasování.
@@ -16,17 +16,16 @@ dvou experimentů srovnávajících různé mechanismy trasování.
 \section*{Úvod}
 
 Během první vlny pandemie covid-19 šly mnohé státy včetně Česka
-cestou tzv. lockdownu, kdy byly kontakty lidí omezeny až na
+cestou tzv. lock\-downu, kdy byly kontakty lidí omezeny jen na
 nejnutnější. Tento přístup byl účinný, avšak za cenu velkých
 ekonomických ztrát. Pro další postup bylo tedy nutné zvolit šetrnější
-opatření, která by nebyla tak ekonomicky nákladná, přesto by zabránila
-šíření nákazy.
+opatření, která by nebyla tak ekonomicky nákladná, a přesto by zabránila šíření nákazy.
 
 V~praxi se však ukázalo, že zvolit vhodná opatření není
 jednoduché. Při jejich zavedení dochází k~omezení obyvatel a různých
 odvětví, a je tedy nutné prokázat jejich účinnost a nutnost. Bez
 zdůvodnění a analýzy jsou opatření zaváděna příliš pozdě, kdy už není
-možné zabránit vyšším ztrátám na životech i poklesu ekonomiky.
+možné zabránit vyšším ztrátám na životech i většímu poklesu ekonomiky.
 
 Jedním z~nástrojů, které mohou být nápomocny, jsou epidemiologické
 modely. Ty je nutno rozšířit tak, aby umožňovaly modelovat skutečně
@@ -35,7 +34,7 @@ porovnávat zvažované varianty.
 
 Epidemiologická opatření obecně snižují pravděpodobnost přenosu nemoci. Toho
 je dosaženo buď omezením pravděpodobnosti, že při kontaktu s~infekčním jedincem
-dojde k~přenosu nemoci (pomocí protektivních opatření jako rozestupy, roušky
+dojde k~přenosu nemoci (pomocí protektivních opatření jako jsou rozestupy, roušky
 a zvýšená hygiena), nebo omezením pravděpodobnosti, že k~rizikovému kontaktu
 dojde. Druhá skupina opatření omezuje samotné kontakty, a to buď plošně
 (uzavření škol, obchodů, veřejných míst), nebo na individuální úrovni
@@ -53,12 +52,12 @@ trasování~\cite{pg:mooney2020,pg:kucharski2020,pg:Kerr2020,pg:keeling2020,pg:b
 
 
 Modelování různých epidemiologických opatření je i součástí 
-modelu M~\cite{M-techrep2021}. Základním nástrojem pro modelování trasování je v~našem případě simulace.
+modelu M~\cite{M-techrep2021}. Výchozím nástrojem pro modelování trasování je v~našem případě simulace.
 
 V~následující podkapitole stručně nastíníme základní principy modelu M
 a vy\-svět\-lí\-me, jak jsou jednotlivá opatření v~tomto modelu
-simulována. Následuje podkapitola s~ukázkou dvou experimentů
-porovnávajících různě silné mechanismy trasování. V~závěru shrneme
+simulována. Následuje podkapitola, ve které si ukážeme dva experimenty
+porovnávající různě silné mechanismy trasování. V~závěru shrneme
 výhody a nevýhody našeho přístupu.
 
 
@@ -89,7 +88,7 @@ Jedna iterace epidemiologického modelu odpovídá jednomu dni. Každý den
 může dojít ke změně stavu jedince. Délky pobytů ve většině stavů jsou
 dány parametry nemoci. Výjimku tvoří přechod $S \rightarrow E$, kde
 je pravděpodobnost přechodu dána jak parametrem nemoci $\beta$
-(nakažlivost), tak parametry hran příslušných uzlu odpovídajícímu
+(nakažlivost), tak parametry hran příslušných uzlů odpovídajících
 danému jedinci v~grafu $G$.
 
 Graf $G$ je další klíčovou komponentou modelu. V~našem případě je
@@ -98,18 +97,17 @@ skutečnému moravskému městu včetně přilehlých obcí, celkem cca 56 000
 obyvatel). Jde o~multigraf, kde mezi každými dvěma uzly (lidmi v~daném
 městě) může vést jedna nebo více neorientovaných hran. Ty představují
 různé druhy kontaktů mezi dvěma lidmi. Hrana $e$ je dána trojicí $(l,
-p, i)$, kde $l$ udává vrstvu (typ) hrany, $p$ je pravděpodobnost
-kontaktu na dané hraně a $i$ je intenzita kontaktu. Celkem graf
-obsahuje 30 vrstev (např. rodina, škola atd.), každá vrstva má svoji
+p, i)$, kde $l$ udává vrstvu (respektive typ) hrany, $p$ je pravděpodobnost
+kontaktu na dané hraně a $i$ je intenzita kontaktu. Graf
+obsahuje celkem 30 vrstev (např. rodina, škola atd.), každá vrstva má svoji
 váhu $w_l$. Váhy slouží jako pomůcka při simulaci plošných opatření,
 jak ukážeme dále.
 
 Pravděpodobnost, že na dané hraně dojde k~nakažení (a jedinec tedy přejde z~$S$
 do $E$), je dána
-
 \begin{equation}
   p_{S \rightarrow E}(e) = \begin{cases}
-    \beta * i  & \mbox{pokud hrana je aktivní} \\
+    \beta * i  & \mbox{pokud hrana je aktivní,} \\
     0          & \mbox{pokud hrana není aktivní.} 
     \end{cases}
 \end{equation}
@@ -119,8 +117,8 @@ Hrana je v~dané iteraci aktivována s~pravděpodobností kontaktu:
 p_a(e) = w_l * p.
 \end{equation}
 
-Poslední částí modelu je {\em policy} modul. Volá se mezi každými dvěma
-iteracemi jádra modelu a má možnost upravovat jak parametry samotného
+Poslední částí modelu je {\em policy} modul. Je volán se mezi každými dvěma
+iteracemi jádra modelu a má možnost jak upravovat parametry samotného
 epidemiologického modelu, tak modifikovat graf kontaktů $G$. Pomocí {\em policy} modulu
 jsou implementovány různé politiky a opatření, např. testování a
 trasování nebo karanténa. 
@@ -134,8 +132,8 @@ redukcí parametru $\beta$, který reprezentuje nakažlivost nemoci.
 
 Omezení kontaktů se pak implementuje pomocí redukce hodnot
 prav\-dě\-po\-dob\-nos\-tí na příslušných hranách. V~případě plošných opatření
-jde pouze o~změnu jednoho parametru, váhy příslušné vrstvy,
-viz~(\ref{pg:eq:w}). Váhy vrstev jsou ve výchozím stavu rovny jedné a
+jde pouze o~změnu jednoho parametru, tj. váhy příslušné vrstvy,
+viz~vztah (\ref{pg:eq:w}). Váhy vrstev jsou ve výchozím stavu rovny jedné a
 umožňují jednoduše redukovat pravděpodobnosti všech hran spadajících
 do dané vrstvy --  např. nastavením váhy na nulovou hodnotu vypneme
 všechny kontakty v~rámci dané vrstvy.
@@ -193,7 +191,7 @@ náročnost trasování a telefonického zkontaktování vytrasovaných osob.
 Příslušné uzly jsou testovány (pět dní po kontaktu nebo druhý den, pokud uběhlo
 více dní) a pozitivně testované uzly jsou také podrobeny procesu trasování. 
 Všechny uzly, které jsou v~izolaci, jsou uloženy v~databázi izolací spolu s~délkou
-své izolace. Tato délka je při každé iteraci {\em policy modulu} (každý den)
+jejich izolace. Tato délka je při každé iteraci {\em policy modulu} (každý den)
 snížena o~jedna. Po uplynutí požadované délky izolace je provedena výstupní
 procedura, a pokud uzel splňuje její podmínky, je izolace ukončena (hrany uzlu
 jsou navráceny do původního stavu, ale jen za podmínky, že uzly na druhém konci
@@ -236,8 +234,8 @@ jsou fixována na hodnotu $0.5$ (na škále $0 - 1$, kde $0$ odpovídá
 žádným protektivním opatřením a $1$ maximálnímu dodržování nošení
 roušek a ostatních protektivních opatření).
 
-Výsledky jsou zobrazeny na obrázcích~\ref{pg:fig:exp1a}
-a~\ref{pg:fig:exp1b}, které zobrazují medián a mezikvartilové rozpětí
+Výsledky jsou zachyceny na obrázcích~\ref{pg:fig:exp1a}
+a~\ref{pg:fig:exp1b}, které znázorňují medián a mezikvartilové rozpětí
 průběhů epidemie z~1000 provedených simulací.
 
 
@@ -276,8 +274,7 @@ průběhů epidemie z~1000 provedených simulací.
 Na obrázku~\ref{pg:fig:exp1a} vidíme důležitost jednotlivých trasování při
 velké epidemii bez jakýchkoli plošných omezení. V~takovém případě
 nestačí trasování rodiny, ale je nutné k~utlumení epidemie přidat i
-pracovní, školní a volnočasové kontakty. Ideální trasování již
-nepřináší tak výrazné zlepšení oproti tomuto typu trasování.
+pracovní, školní a volnočasové kontakty. Ideální trasování již tak výrazné zlepšení oproti tomuto typu trasování nepřináší.
 
 Obrázek~\ref{pg:fig:exp1b} přináší srovnání stejných trasovacích
 mechanismů v~situaci s~plošný\-mi omezeními (odpovídajícími jaru 2020
@@ -287,7 +284,7 @@ se však rozdíly mezi slabým a silným trasováním stírají a i trasování
 pouze rodinných kontaktů je dostatečné k~udržení nízkého stupně epidemie. 
 
 Pro lepší představu o~rozložení jednotlivých běhů simulace je na
-obrázku~\ref{pg:fig:exp1ab} zobrazena klasifikace běhů dle závažnosti
+obrázku~\ref{pg:fig:exp1ab} znázorněna klasifikace běhů dle závažnosti
 epidemie. Zelená barva označuje běhy s~mírnou epidemií, červená naopak běhy,
 kde epidemie závažně roste. Klasifikace je založena na klouzavém průměru
 nových případů. Osa $x$ odpovídá dni simulace, vertikálně je pak vyneseno
@@ -342,7 +339,7 @@ Jeho hlavní výhodou je možnost simulace jak plošných o\-pat\-ře\-ní, tak
 opatření individuálních. Současně je možno simulovat dodržování
 opatření protektivních (redukcí parametrů nakažlivosti). Díky
 struktuře modelu mohou být opatření simulována detailně (na úrovni
-kontaktu dvou lidí). Lze simulovat různě silné mechanismy testování
+kontaktu dvou lidí). Lze také simulovat rozdílně silné mechanismy testování
 (na úrovni vrstev) a různé stupně izolace (různá síla oslabení hran
 na jednotlivých vrstvách).
 
