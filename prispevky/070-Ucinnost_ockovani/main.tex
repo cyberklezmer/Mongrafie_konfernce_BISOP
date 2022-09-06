@@ -70,6 +70,93 @@ Všechny země dnes rutinně očkují malé děti proti řadě jinak běžných 
 	\label{measles1}
 \end{figure}
 
+\begin{figure}[p]
+	\begin{center}
+		\begin{minipage}[m]{0.45\linewidth}
+			\includegraphics[width=\textwidth]{pic/figPAQ2.png}
+		\end{minipage}
+		\begin{minipage}[m]{0.45\linewidth}
+			\includegraphics[width=\textwidth]{pic/vakcinace-hospital.png}
+		\end{minipage} \\[1ex]
+		\begin{minipage}[m]{0.45\linewidth}
+			\includegraphics[width=\textwidth]{pic/vakcinace-death.png}
+		\end{minipage} 
+		\begin{minipage}[m]{0.45\linewidth}
+			\includegraphics[width=\textwidth]{pic/vakcinace-davky.png}
+		\end{minipage} 
+	\end{center}
+	\caption{Kalibrace modelu H, popisující dynamiku epidemie v~celé České republice se zřetelem na dynamiku hospitalizací \cite{vaccpaper}. Horní levý panel: časový vývoj proporcionálního snížení kontaktů díky opatřením proti covid-19 v~Česku \cite{paqcovid}; od 1.\ března 2021 jsou kontakty nastaveny na 45\,\% mimo školy a 1\,\% ve školách. Horní pravý a dolní levý panel: tenké křivky odpovídají 20 \uv{nejlepším} světům ze 100 000 simulovaných, vybraných metodou Approximate Bayesian Computation \cite{Toni_etal2009}, silné čárkované křivky jsou průměrné modelové trajektorie, silné plné křivky jsou pozorovaná data do 15.\ února 2021 použitá pro kalibraci a nakonec černé křivky jsou pozorovaná data po tomto termínu naznačující dobré prediktivní možnosti modelu H. Dolní pravý panel: denní počty prvních dávek vakcín distribuované mezi jednotlivé věkové třídy při rozestupu mezi dávkami 21 dní.}
+	\label{kalibraceH}
+\end{figure}
+
+\begin{figure}[p]
+	\begin{center}
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/SP_DIFF_mean_T.jpg}
+		\end{minipage}
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/SL_DIFF_mean_T.jpg}
+		\end{minipage}
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/SM_DIFF_mean_T.jpg}
+		\end{minipage} \\[1ex]
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/AP_DIFF_mean_T.jpg}
+		\end{minipage}
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/AL_DIFF_mean_T.jpg}
+		\end{minipage}
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/AM_DIFF_mean_T.jpg}
+		\end{minipage} \\[1ex]
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/SAP_DIFF_mean_T.jpg}
+		\end{minipage}
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/SAL_DIFF_mean_T.jpg}
+		\end{minipage}
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/SAM_DIFF_mean_T.jpg}
+		\end{minipage}
+	\end{center}
+	\caption{Výhodnost odkladu druhé dávky vakcíny o~tři týdny z~původních 21 na 42 dní pro několik typů fungování vakcíny, jak ji předpovídají naše tři modely pro věkovou skupinu 65 a více let. Výhodnost rozestupu mezi dávkami 21 dní je vyznačena odstíny modré (kladné hodnoty, více zemřelých pro rozestup 42 dní), kdežto výhodnost odkladu o~42 dní je vyznačena odstíny červené (záporné hodnoty, více zemřelých pro rozestup 21 dní). Horní řádek: efekt vakcíny na pravděpodobnost přenosu infekce z~infekčního na vnímavého jedince, střední řádek: efekt vakcíny na pravděpodobnost, že se u~nakaženého jedince objeví symptomy, dolní řádek: kombinace obou těchto typů fungování vakcíny. Levý sloupec: model M, střední sloupec: model H, pravý sloupec: model F.}
+	\label{figvacc1}
+\end{figure}
+
+\begin{figure}[p]
+	\begin{center}
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/JL_DIFF_mean_T.jpg}
+		\end{minipage}
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/DL_DIFF_mean_T.jpg}
+		\end{minipage}
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/JDL_DIFF_mean_T.jpg}
+		\end{minipage}
+	\end{center}
+	\caption{Výhodnost odkladu druhé dávky vakcíny o~tři týdny z~původních 21 na 42 dní pro několik dalších možných typů fungování vakcíny (výsledky modelu H) a věkovou skupinu 65 a více let. Význam barevných škál je jako v obr.\,\ref{figvacc1}. Levý panel: efekt vakcíny na pravděpodobnost vážného stavu při hospitalizaci, střední panel: efekt vakcíny na pravděpodobnost úmrtí při hospitalizaci, pravý panel: kombinace obou těchto typů fungování vakcíny.}
+	\label{figvacc2}
+\end{figure}
+
+\begin{figure}[p]
+	\begin{center}
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/SA65L_DIFF_mean_T.jpg}
+		\end{minipage}
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/SAL_DIFF_mean_T.jpg}
+		\end{minipage}
+		\begin{minipage}[m]{0.3\linewidth}
+			\includegraphics[width=\textwidth]{pic/SA4lessL_DIFF_mean_T.jpg}
+		\end{minipage}
+	\end{center}
+	\caption{Výhodnost odkladu druhé dávky vakcíny o~tři týdny z~původních 21 na 42 dní za předpokladu vlivu vakcíny na pravděpodobnost, že se u~nakaženého jedince objeví symptomy, a na pravděpodobnost přenosu infekce z~infekčního na vnímavého jedince, pro různé další specifické scénáře a věkovou skupinu 65 a více let. Význam barevných škál je jako v obr.\,\ref{figvacc1}. Levý panel: intenzivnější epidemie, kontakty zvýšeny ze 45\,\% na 65\,\%, střední panel: intenzita epidemie a rychlost očkování jako v~Česku, pravý panel: nízká rychlost očkování, snížená na čtvrtinu ve srovnání s~Českem.}
+	\label{figvacc3}
+\end{figure}
+
+
+
 Kandidátem na získání globální kolektivní imunity očkováním dlouho byly spal\-nič\-ky, nemoc, která stále po celém světě zabíjí stovky tisíc dětí ročně. Základní reprodukční číslo $R_0$ spalniček je často uváděno v~rozsahu 12--18, ale zřejmě může dosahovat i mnohem vyšších hodnot \cite{Guerra_etal2017}. Protože jde o~endemickou (tedy trvale přítomnou) nemoc, potřebujeme k~posouzení vlivu očkování modely, které uvažují populační demografii a nejlépe také rozlišují věkovou strukturu obyvatelstva. Ilustrujme si účinky dlouhodobé vakcinační strategie na pravděpodobně nejjednodušším modelu spalniček. Jde vlastně opět o~SEIR model, který jsme si představili v~kapitole \ref{Typy_modelu}, nicméně nyní je v~něm třeba udělat dvě úpravy: zahrnout demografii populace (narození a přirozená úmrtí) a uvažovat vliv vakcinace v~rámci členu popisujícího narození. Model pak vypadá takto \cite{BolkerGrenfell1993}:
 \begin{equation}
 	\begin{array}{l}
@@ -106,24 +193,7 @@ Tři různé modely, které jsme pro hledání odpovědi na otázku výhodnosti 
 
 Pro výchozí nastavení jsme každý model kalibrovali na aktuální průběh epidemie covid-19 a vývoj očkování v~Česku. Protože jsme model kalibrovali na datech před 1.\ dubnem 2021, použili jsme pro kalibraci mezidávkový rozestup 21 dní. Kromě toho v~souladu se všeobecně přijatým názorem uvažujeme, že první dávka bude účinná po 14 dnech od její aplikace a druhá dávka po 7 dnech od její aplikace, přičemž uvažujeme účinnost první a druhé dávky 70\,\% a 85\,\% v~zabránění nakažení při kontaktu naočkovaného vnímavého jedince s~infekční osobou \cite{Hall_etal2021}. Predikce modelu H při takto nastavených parametrech ukazuje obr.\,\ref{kalibraceH}. 
 
-\begin{figure}[ht]
-	\begin{center}
-		\begin{minipage}[m]{0.45\linewidth}
-			\includegraphics[width=\textwidth]{pic/figPAQ2.png}
-		\end{minipage}
-		\begin{minipage}[m]{0.45\linewidth}
-			\includegraphics[width=\textwidth]{pic/vakcinace-hospital.png}
-		\end{minipage} \\[1ex]
-		\begin{minipage}[m]{0.45\linewidth}
-			\includegraphics[width=\textwidth]{pic/vakcinace-death.png}
-		\end{minipage} 
-		\begin{minipage}[m]{0.45\linewidth}
-			\includegraphics[width=\textwidth]{pic/vakcinace-davky.png}
-		\end{minipage} 
-	\end{center}
-	\caption{Kalibrace modelu H, popisující dynamiku epidemie v~celé České republice se zřetelem na dynamiku hospitalizací \cite{vaccpaper}. Horní levý panel: časový vývoj proporcionálního snížení kontaktů díky opatřením proti covid-19 v~Česku \cite{paqcovid}; od 1.\ března 2021 jsou kontakty nastaveny na 45\,\% mimo školy a 1\,\% ve školách. Horní pravý a dolní levý panel: tenké křivky odpovídají 20 \uv{nejlepším} světům ze 100 000 simulovaných, vybraných metodou Approximate Bayesian Computation \cite{Toni_etal2009}, silné čárkované křivky jsou průměrné modelové trajektorie, silné plné křivky jsou pozorovaná data do 15.\ února 2021 použitá pro kalibraci a nakonec černé křivky jsou pozorovaná data po tomto termínu naznačující dobré prediktivní možnosti modelu H. Dolní pravý panel: denní počty prvních dávek vakcín distribuované mezi jednotlivé věkové třídy při rozestupu mezi dávkami 21 dní.}
-	\label{kalibraceH}
-\end{figure}
+
 
 % \begin{figure}[ht]
 % 	\centering
@@ -138,75 +208,15 @@ Povědomí o~tom, jak vakcíny proti covid-19 fungují, se vyvíjelo postupně, 
 
 Všechny tři námi použité modely mohou snadno zahrnout vliv vakcín na prav\-dě\-po\-dob\-nost toho, že se u~nakaženého jedince objeví symptomy, a na pravděpodobnost přenosu infekce z~infekčního na vnímavého jedince. Výsledky pro tyto scénáře shrnuje obr.\,\ref{figvacc1}, předpokládající skutečnou intenzitu epidemie a realistické dodávky vakcín (odhadnuté k~16.\ 3.\ 2021) v~Česku. Tento i další obrázky (\ref{figvacc2} a \ref{figvacc3}) mají jednotnou strukturu: pro zvolený scénář (jak vakcína funguje, intenzita epidemie, rychlost dodávek vakcín) uvažujeme všechny možné kombinace účinnosti vakcíny po první a druhé dávce (účinnost 7 dní po druhé dávce je vždy nejméně taková jako účinnost 14 dní po dávce první). Obrázek \ref{figvacc1} ukazuje, že delší rozestup 42 dní je ve všech uvedených scénářích výhodnější, jen pokud účinnost po druhé dávce není o~mnoho vyšší než po dávce první, přičemž množství kombinací účinnosti první a druhé dávky, pro které je odklad o~42 dní výhodnější, je největší v~případě vlivu vakcíny na pravděpodobnost, že se u~nakaženého jedince objeví symptomy.
 
-\begin{figure}[ht!]
-	\begin{center}
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/SP_DIFF_mean_T.jpg}
-		\end{minipage}
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/SL_DIFF_mean_T.jpg}
-		\end{minipage}
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/SM_DIFF_mean_T.jpg}
-		\end{minipage} \\[1ex]
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/AP_DIFF_mean_T.jpg}
-		\end{minipage}
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/AL_DIFF_mean_T.jpg}
-		\end{minipage}
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/AM_DIFF_mean_T.jpg}
-		\end{minipage} \\[1ex]
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/SAP_DIFF_mean_T.jpg}
-		\end{minipage}
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/SAL_DIFF_mean_T.jpg}
-		\end{minipage}
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/SAM_DIFF_mean_T.jpg}
-		\end{minipage}
-	\end{center}
-	\caption{Výhodnost odkladu druhé dávky vakcíny o~tři týdny z~původních 21 na 42 dní pro několik typů fungování vakcíny, jak ji předpovídají naše tři modely pro věkovou skupinu 65 a více let. Výhodnost rozestupu mezi dávkami 21 dní je vyznačena odstíny modré (kladné hodnoty, více zemřelých pro rozestup 42 dní), kdežto výhodnost odkladu o~42 dní je vyznačena odstíny červené (záporné hodnoty, více zemřelých pro rozestup 21 dní). Horní řádek: efekt vakcíny na pravděpodobnost přenosu infekce z~infekčního na vnímavého jedince, střední řádek: efekt vakcíny na pravděpodobnost, že se u~nakaženého jedince objeví symptomy, dolní řádek: kombinace obou těchto typů fungování vakcíny. Levý sloupec: model M, střední sloupec: model H, pravý sloupec: model F.}
-	\label{figvacc1}
-\end{figure}
+
  
 Obr.\,\ref{figvacc2} shrnuje modelové predikce pro případy, kdy vakcína postupně ovlivňuje pravděpodobnost vážného stavu, úmrtí a i kombinace vážného stavu a úmrtí. Množství kombinací účinnosti první a druhé dávky, pro které je rozestup 42 dní výhodnější, postupně roste.
  
-\begin{figure}[ht!]
-	\begin{center}
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/JL_DIFF_mean_T.jpg}
-		\end{minipage}
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/DL_DIFF_mean_T.jpg}
-		\end{minipage}
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/JDL_DIFF_mean_T.jpg}
-		\end{minipage}
-	\end{center}
-	\caption{Výhodnost odkladu druhé dávky vakcíny o~tři týdny z~původních 21 na 42 dní pro několik dalších možných typů fungování vakcíny (výsledky modelu H) a věkovou skupinu 65 a více let. Význam barevných škál je jako v obr.\,\ref{figvacc1}. Levý panel: efekt vakcíny na pravděpodobnost vážného stavu při hospitalizaci, střední panel: efekt vakcíny na pravděpodobnost úmrtí při hospitalizaci, pravý panel: kombinace obou těchto typů fungování vakcíny.}
-	\label{figvacc2}
-\end{figure}
+
 
 V~řadě zemí bohužel není tak nízká intenzita epidemie ani takové dodávky vakcín jako v~Česku. Modelové výstupy naznačují, že množství kombinací účinnosti první a druhé dávky, pro které je rozestup 42 dní výhodnější, roste s~rostoucí intenzitou epidemie a s~klesající rychlostí dodávek vakcín (obr.\,\ref{figvacc3}). Pro tento obrázek předpokládáme vliv vakcíny na pravděpodobnost, že se u~nakaženého jedince objeví symptomy, a na pravděpodobnost přenosu infekce z~infekčního na vnímavého jedince, avšak kvalitativně analogické výsledky vycházejí i pro jiné předpoklady o~fungování vakcíny. Přestože vliv intenzity epidemie je nezanedbatelný, mnohem větší je vliv rychlosti vakcinace, kdy v~zásadě bez ohledu na způsob fungování vakcíny je při nízké intenzitě vakcinace rozestup mezi dávkami 42 dní výhodný pro všechny rozumné kombinace účinností první a druhé dávky.
 
-\begin{figure}[ht!]
-	\begin{center}
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/SA65L_DIFF_mean_T.jpg}
-		\end{minipage}
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/SAL_DIFF_mean_T.jpg}
-		\end{minipage}
-		\begin{minipage}[m]{0.3\linewidth}
-			\includegraphics[width=\textwidth]{pic/SA4lessL_DIFF_mean_T.jpg}
-		\end{minipage}
-	\end{center}
-	\caption{Výhodnost odkladu druhé dávky vakcíny o~tři týdny z~původních 21 na 42 dní za předpokladu vlivu vakcíny na pravděpodobnost, že se u~nakaženého jedince objeví symptomy, a na pravděpodobnost přenosu infekce z~infekčního na vnímavého jedince, pro různé další specifické scénáře a věkovou skupinu 65 a více let. Význam barevných škál je jako v obr.\,\ref{figvacc1}. Levý panel: intenzivnější epidemie, kontakty zvýšeny ze 45\,\% na 65\,\%, střední panel: intenzita epidemie a rychlost očkování jako v~Česku, pravý panel: nízká rychlost očkování, snížená na čtvrtinu ve srovnání s~Českem.}
-	\label{figvacc3}
-\end{figure}
+
 
 \section*{Závěr}
 
