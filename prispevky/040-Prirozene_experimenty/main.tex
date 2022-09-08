@@ -15,18 +15,20 @@ proběhlo v~roce 1995, nemá žádnou souvislost s~epidemií covid-19.
 
 \begin{figure}[ht]
     \begin{center}
-    \includegraphics[scale=0.065]{okrsky_v3.png}
+    \includegraphics[scale=0.060]{okrsky_v3.png}
     \label{fig:senate_map}
     \end{center}
     \smallskip
     \caption{Mapy volebních obvodů pro volby do Senátu Parlamentu ČR. Na podzim 2020 proběhly volby pouze ve volebních obvodech 3, 6, 9, 12, ... (modře).}
     \end{figure}
 
+\vspace{-0.5eM}
+
 Druhé kolo senátních voleb se tak \uv{shodou okolností} stalo přirozeným experimentem, ideální příležitostí, jak ověřit míru vlivu rozsáhlé akce, které se účastní stovky tisíc lidí, na vývoj epidemie.
 
 Náš pokus o~odhad vlivu voleb na vývoj epidemie covid-19 samozřejmě není první, tímto tématem se zabývali vědci v~mnoha zemích. Nejstarší články, které zkoumaly vliv voleb na růst nových infekcí a mortalitu \cite{Berry2020, feltham2020no, AJPH2020}, nepotvrdily obavy, že by volby přispívaly k~růstu epidemie covid-19. Otázkou však zůstává, do jaké míry jsou realistické modely, které v~daných článcích odhadují vývoj epidemie v~hypotetickém případě neuskutečnění voleb. Dalším problémem je relativní homogenita volební účasti ve všech studovaných případech. Na druhou stranu, 
 \cite{bertoli_france}, \cite{cotti2020relationship} i \cite{Cassan2020} 
-ukazují, v~ostrém protikladu k~výše citovaným studiím, že volby signifikantně zrychlují růst epidemie. Tyto rozporuplné výsledky jsou dalším důvodem, proč studovat vliv voleb pomocí přirozeného experimentu, v~němž není třeba hypotetický svět \uv{bez voleb} modelovat, neboť tento svět v~dané zemi (ve smyslu kontrolní skupiny) existuje.\footnote{Podobná debata probíhá i v~případě dalších událostí s~politickým pozadím, jako jsou např. velká volební setkání. \cite{dave2020risk} používají umělou kontrolní skupinu, s~jejíž pomocí ukazují, že široce kritizovaná Trumpova setkání s~voliči v~Tulse a Oklahomě nejspíše nezpůsobila zásadní růst nových případů covid-19 ani růst mortality. Na druhou stranu  \cite{bernheim2020effects} agregují 18 Trumpových volebních setkání a odhadují, že tato setkání způsobila 30 tisíc případů covid-19 a přibližně 700 úmrtí. Dále  \cite{bernheim2020effects} ukazují, že vliv jednotlivých setkání je velice různorodý a analýzu jednoho setkání, jako bylo nap59klad to v~Tulse, není možno považovat za reprezentativní.}
+ukazují, v~ostrém protikladu k~výše citovaným studiím, že volby signifikantně zrychlují růst epidemie. Tyto rozporuplné výsledky jsou dalším důvodem, proč studovat vliv voleb pomocí přirozeného experimentu, v~němž není třeba hypotetický svět \uv{bez voleb} modelovat, neboť tento svět v~dané zemi (ve smyslu kontrolní skupiny) existuje.\footnote{Podobná debata probíhá i v~případě dalších událostí s~politickým pozadím, jako jsou např. velká volební setkání. \cite{dave2020risk} používají umělou kontrolní skupinu, s~jejíž pomocí ukazují, že široce kritizovaná Trumpova setkání s~voliči v~Tulse a Oklahomě nejspíše nezpůsobila zásadní růst nových případů covid-19 ani růst mortality. Na druhou stranu  \cite{bernheim2020effects} agregují 18 Trumpových volebních setkání a odhadují, že tato setkání způsobila 30 tisíc případů covid-19 a přibližně 700 úmrtí. Dále  \cite{bernheim2020effects} ukazují, že vliv jednotlivých setkání je velice různorodý a analýzu jednoho setkání, jako bylo například to v~Tulse, není možno považovat za reprezentativní.}
 
 
 \section*{Metodologie}
@@ -46,14 +48,14 @@ Formálně modelujeme růst pandemie následovně
 \end{equation}
 
 Základní proměnné, které chceme vysvětlit, jsou relativní růsty za $n$ dní, a to růst prevalence $P$ v~rovnici (\ref{eq:event_study}) a růst počtu hospitalizovaných v~rovnici (\ref{eq:event_study2}), které pozorujeme v~obci $m$ (v~případě prevalencí), či v~obci s~rozšířenou působností $r$ (v~případě hospitalizací) v~den $t; \beta$ a $\Gamma$ jsou odhadované koeficienty.\footnote{$n$ položíme rovno 14 dnům, takže zkoumaná perioda růstu obsahuje
-(i) bezpříznakovou inkubační dobu\cite{lauer_et_al2020}, (ii) čas potřebný pro rezervaci testu, test samotný a jeho vyhodnocení, (iii) případnou hospitalizaci. Abychom ověřili robustnost studie, budeme pracovat i se sedmidenním růstem incidence, který též vyrovnává kolísání v~rámci týdne.}
+(i) bezpříznakovou inkubační dobu \cite{lauer_et_al2020}, (ii) čas potřebný pro rezervaci testu, test samotný a jeho vyhodnocení, (iii) případnou hospitalizaci. Abychom ověřili robustnost studie, budeme pracovat i se sedmidenním růstem incidence, který též vyrovnává kolísání v~rámci týdne.}
 
 
 V~rovnici~(\ref{eq:event_study}) jsou předmětem našeho zájmu proměnné, které získáme jako součin binárního indikátoru udávajícího, zda se v~dané oblasti v~roce 2020 volby konaly, a dummy proměnné pro jednotlivé dny $j$, kde $j$ nabývá hodnot od $-J$ do $K$. 
 Dobu před volbami zkoumáme pro $J=28$ dní, což je doba dostatečně dlouhá na to, abychom byli schopni detekovat případné rozdíly mezi volebními a nevolebními oblastmi v~době před konáním voleb. Povolební období pak budeme zkoumat po dobu $K=56$ dní, tedy opět po dobu, během níž by se projevil jakýkoli vliv voleb na pandemii. Abychom postihli nelineární podstatu pandemie, zavedeme dále časově závislé kontrolní proměnné $\textbf{X}_{m,t-n}$, které popisují pandemickou situaci v~dané obci $n$ dní před časem $t$ (např. kumulativní počet případů, příp. počet aktivních případů). Dále model obsahuje fixní efekt pro každou obci $\lambda_{m}$ a fixní efekt pro každý den $\lambda_{t}$, neboť musíme uvážit časovou i geografickou heterogenitu pandemického trendu. Chybový člen značíme
  $\varepsilon_{m,t}$.
 
-V~regresi nemocničních případů~(\ref{eq:event_study2}) jsou našimi zkoumanými proměnnými sou\-či\-ny podílu počtu obyvatel daného ORP ve volební oblasti a opět dummy proměnné pro jednotlivé dny $j$, kde $j$ nabývá hodnot od $-J$ do $K$.\footnote{Ve třech největších městech -- v~Praze, Brně a Ostravě -- uvažujeme o~všech obyvatelích jako o~těch, kteří žijí ve volebním obvodu, neboť \textit{de facto} tvoří jedinou obec provázanou mnoha vazbami. Naše analýza je nicméně robustní ve smyslu, že stejné výsledky dostáváme i v~případě, že také v~těchto městech bereme počet obyvatel ve volebním okrsku úměrný části voličů, která je ve skutečnosti oprávněna volit.} Důvod tohoto postupu je prostý -- některá ORP jsou rozdělena mezi jednotlivé senátní obvody, takže se může stát, že některá obec v~rámci stejného ORP \uv{volí} a některá ne. Dále model obsahuje fixní efekt pro každou obci $\lambda_{r}$ a fixní efekt pro každý den $\lambda_{t}$, stejně jako v~předešlé rovnici. Chybový člen značíme $\varepsilon_{r,t}$.
+V~regresi nemocničních případů~(\ref{eq:event_study2}) jsou našimi zkoumanými proměnnými sou\-či\-ny podílu počtu obyvatel daného ORP ve volební oblasti a opět dummy proměnné pro jednotlivé dny $j$, kde $j$ nabývá hodnot od $-J$ do $K$.\footnote{Ve třech největších městech -- v~Praze, Brně a Ostravě -- uvažujeme o~všech obyvatelích jako o~těch, kteří žijí ve volebním obvodu, neboť \textit{de facto} tvoří jedinou obec provázanou mnoha vazbami. Naše analýza je nicméně robustní ve smyslu, že stejné výsledky dostáváme i v~případě, že také v~těchto městech bereme počet obyvatel ve volebním okrsku úměrný části voličů, která je ve skutečnosti oprávněna volit.} Důvod tohoto postupu je prostý -- některá ORP jsou rozdělena mezi jednotlivé senátní obvody, takže se může stát, že některá obec v~rámci stejného ORP \uv{volí} a některá ne. Dále model obsahuje fixní efekt pro každou obec $\lambda_{r}$ a fixní efekt pro každý den $\lambda_{t}$, stejně jako v~předešlé rovnici. Chybový člen značíme $\varepsilon_{r,t}$.
 
 \subsection*{Data}
 \paragraph{Epidemiologická data.}  Veřejná data Ministerstva zdravotnictví ČR a Ústavu pro zdravotnické informace a statistiku (ÚZIS) popisují epidemiologickou situaci ve všech 6259 obcích České republiky. Pro každou obec udávají denní počet nových detekovaných případů, a to jak celkem, tak separátně v~kategorii nad 65 let. Dále tato data obsahují informace o~hospitalizovaných a o~pozitivitě PCR testů separátně pro všech 206 obcí s~rozšířenou působností (ORP). 
@@ -102,6 +104,9 @@ Nejenže jsou tak volby s osobní účastí v průběhu pandemie nebezpečné ve
  \label{fig:heterogen_age}
 \end{figure}
 
-\it
-Původní verze článku byla publikována jako
-Palguta J, Levínský R, Škoda S. Do elections accelerate the COVID-19 pandemic?: Evidence from a natural experiment [published online ahead of print, 2021 Sep 17]. J Popul Econ. 2021;1-44. doi:10.1007/s00148-021-00870-1
+\vspace{2eM}
+\noindent \it Původní verze článku byla publikována jako
+Palguta J, Levínský R, Škoda S. Do elections accelerate the COVID-19 pandemic?: Evidence from a natural experiment [published online ahead of print, 2021 Sep 17]. J Popul Econ. 2021;1-44.\\ doi:10.1007/s00148-021-00870-1
+
+\vspace{2eM}
+\noindent Ján Palguta, jenž působí na Ekonomicko--správní fakultě Masarykovy univerzity, děkuje za podporu z projektu NPO \uv{Národní institut pro výzkum socioekonomických dopadů nemocí a systémových rizik} číslo {\em LX22NPO5101}.
